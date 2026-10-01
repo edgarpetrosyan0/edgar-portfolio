@@ -1,16 +1,3 @@
-export const marquee = [
-  "React 19",
-  "Next.js 16",
-  "Angular 18",
-  "TypeScript",
-  "Redux Toolkit",
-  "RxJS",
-  "Tailwind CSS",
-  "Dashboards",
-  "Real-time UI",
-  "Accessibility",
-];
-
 export const skills: Record<string, string[]> = {
   Core: ["JavaScript (ES6+)", "TypeScript", "OOP", "HTML5", "CSS3 / SCSS"],
   "Frameworks & libraries": ["Angular", "React", "Next.js", "Knockout.js"],
@@ -67,6 +54,16 @@ export const skills: Record<string, string[]> = {
 };
 
 export const jobs = [
+  {
+    title: "Frontend Engineer · NDA Client Contract / Freelance",
+    period: "September 2026 - Present",
+    points: [
+      "Developed and integrated responsive web interfaces using modern frontend technologies and established project architecture.",
+      "Designed and integrated secure user flows, including authentication state management and post-authentication navigation.",
+      "Collaborated cross-functionally with project managers,designers,and backend developers to define requirements, align technical solutions, and deliver high-quality web applications.",
+      "Performed comprehensive functional testing across desktop and mobile environments and delivered production-ready implementations.",
+    ],
+  },
   {
     title: "Frontend Engineer · Ideascoll",
     period: "April 2025 – Present",

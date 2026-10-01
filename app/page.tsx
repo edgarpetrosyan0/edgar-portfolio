@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
-import { jobs, marquee, skills } from "@/lib/data";
+import { jobs, skills } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 
 

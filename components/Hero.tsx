@@ -152,7 +152,7 @@ export default function Hero() {
             ))}
 
             <span className="line2 grad" aria-hidden="true">
-              Senior Frontend Developer
+              Senior Frontend Engineer
             </span>
           </h1>
 
@@ -161,7 +161,7 @@ export default function Hero() {
           </p>
 
           <p className="lede">
-            Senior Frontend Developer with  <strong>7 years</strong> of handson experience architecting scalable,
+            Senior Frontend Engineer with  <strong>7 years</strong> of handson experience architecting scalable,
              high-quality
             web applications using <br></br><strong>ReactJs, Next.js and Angular</strong>, and TypeScript. Specialized in
             building complex admin panels, dashboards, realtime features, and performance-critical user
