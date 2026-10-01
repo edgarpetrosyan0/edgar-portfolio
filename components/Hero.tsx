@@ -7,7 +7,6 @@ const WORDS = ["Edgar", "Petrosyan"] as const;
 
 const PHRASES = [
   "Building Modern Web Applications",
-  "Building Scalable Frontend Systems",
   "Creating High-Performance Interfaces",
   "Developing Complex Web Applications",
 ] as const;
@@ -204,7 +203,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <figure className="visual">
+        <div className="visual">
           <div className="frame">
             <Image
               src="/photo.jpg"
@@ -216,10 +215,10 @@ export default function Hero() {
             />
           </div>
 
-          <figcaption className="badge">
+          <div className="badge">
             Currently @ <b>Ideascoll</b>
-          </figcaption>
-        </figure>
+          </div>
+        </div>
       </div>
     </header>
   );

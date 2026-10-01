@@ -119,6 +119,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 aria-label="Open Edgar Petrosyan's LinkedIn profile"
               >
+                
                 LinkedIn
               </a>
               <a

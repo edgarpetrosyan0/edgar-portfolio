@@ -83,7 +83,7 @@ h3 {
 }
 
 /* nav */
- nav {
+nav {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -146,10 +146,6 @@ nav ul a:hover {
   background: var(--surface2);
   transform: translateY(-2px);
 }
-
-/* =========================
-   HAMBURGER
-========================= */
 
 .menu-toggle {
   display: none;
@@ -466,7 +462,6 @@ h1 .line2 {
 
 .btn.main {
   background: var(--grad);
-  border-color: transparent;
   color: #fff;
 }
 
@@ -692,6 +687,15 @@ h2 {
   margin-bottom: 0.4rem;
 }
 
+@media (max-width: 760px) {
+  .job h3 {
+    font-size: 20px;
+  }
+  .job li {
+    font-size: 14px;
+  }
+}
+
 .job li::marker {
   color: var(--crimson);
 }
@@ -848,7 +852,6 @@ footer {
   margin-bottom: 64px;
 }
 
-
 .education-grid {
   display: grid;
   gap: 80px;
@@ -863,7 +866,6 @@ footer {
   text-transform: uppercase;
 }
 
-
 .education-column {
   position: relative;
 }
@@ -873,7 +875,6 @@ footer {
   display: grid;
   gap: 24px;
 }
-
 
 .education-content {
   padding: 26px 28px;
@@ -916,7 +917,6 @@ footer {
   color: var(--muted);
   line-height: 1.6;
 }
-
 
 .language-list {
   display: flex;
