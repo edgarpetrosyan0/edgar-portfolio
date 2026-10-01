@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import ZoomBlocker from "@/components/ZoomBlocker";
 
 const display = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -41,8 +42,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
-          <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"></meta>
-      <body>{children}</body>
+      <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"></meta>
+      <body>
+        <ZoomBlocker />
+        <div>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
