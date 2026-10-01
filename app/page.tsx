@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import Counter from "@/components/Counter";
 import Reveal from "@/components/Reveal";
 import { jobs, marquee, skills } from "@/lib/data";
 import Navbar from "@/components/Navbar";
@@ -55,24 +54,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section>
-        <div className="wrap two">
-          <div>
-            <h2>Education</h2>
-            <h3>Armenian National Polytechnic University</h3>
-            <p>Bachelor’s degree in Electrical Engineering, 2009–2013</p>
-            <h3>Microsoft Armenia Innovation Center</h3>
-            <p>Programming fundamentals for beginners; Web Programming, 2015–2016</p>
+      {/* <section id="education">
+        <div className="wrap">
+          <div className="language-list">
+            <div className="languages-column">
+              <h2> Languages</h2>
+              <div className="language-list">
+                <div className="language-card">
+                  <div>
+                    <h3>Armenian</h3>
+                    <span>Native</span>
+                  </div>
+                  <strong>01</strong>
+                </div>
+
+                <div className="language-card">
+                  <div>
+                    <h3>Russian</h3>
+                    <span>Fluent</span>
+                  </div>
+                  <strong>02</strong>
+                </div>
+
+                <div className="language-card">
+                  <div>
+                    <h3>English</h3>
+                    <span>Intermediate</span>
+                  </div>
+                  <strong>03</strong>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <h2>Languages</h2>
-            <h3>Armenian</h3><p>Native</p>
-            <h3>Russian</h3><p>Fluent</p>
-            <h3>English</h3><p>Intermediate</p>
+
+          <div className="education-grid">
+            <div className="education-column">
+              <h2>Education  </h2>
+              <div className="education-item">
+                <div className="education-dot" />
+                <div className="education-content">
+                  <span className="education-period">2009 — 2013</span>
+                  <h3>Armenian National Polytechnic University</h3>
+                  <p className="education-degree">
+                    Bachelor’s Degree in Electrical Engineering
+                  </p>
+                </div>
+              </div>
+
+              <div className="education-item">
+                <div className="education-dot" />
+                <div className="education-content">
+                  <span className="education-period">2015 — 2016</span>
+                  <h3>Microsoft Armenia Innovation Center</h3>
+                  <p className="education-degree">
+                    Programming Fundamentals & Web Programming
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
           </div>
+
         </div>
       </section> */}
-
       <section id="contact">
         <div className="wrap">
           <div className="contact">
