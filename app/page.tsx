@@ -10,21 +10,6 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      {/* <section id="about">
-        <div className="wrap">
-          <h2>About</h2>
-          <div className="about">
-            <p>Senior Frontend Developer with 7 years of hands-on experience building scalable, high-quality web applications. I specialize in complex admin panels, dashboards, real-time features and performance-critical interfaces. I own features end to end, modernize legacy codebases, keep architectures clean and maintainable, and work closely with product, design and backend teams to ship production-grade solutions in fast-paced environments.</p>
-            <div className="stats">
-              <div className="stat"><Counter to={7} /><span>years of experience</span></div>
-              <div className="stat"><Counter to={6} /><span>companies and clients</span></div>
-              <div className="stat"><Counter to={3} /><span>languages spoken</span></div>
-              <div className="stat"><b>React 19</b><span>Next.js 16, Angular 18+</span></div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section id="experience">
         <div className="wrap">
           <h2>Where I've worked</h2>

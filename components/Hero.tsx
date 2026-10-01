@@ -6,10 +6,10 @@ import { useEffect, useRef, useState } from "react";
 const WORDS = ["Edgar", "Petrosyan"] as const;
 
 const PHRASES = [
-  "React & Next.js interfaces",
-  "Angular & RxJS applications",
-  "Dashboards & real-time UI",
-  "Fast, accessible web apps",
+  "Building Modern Web Applications",
+  "Building Scalable Frontend Systems",
+  "Creating High-Performance Interfaces",
+  "Developing Complex Web Applications",
 ] as const;
 
 const OFFSETS = [0, WORDS[0].length] as const;
