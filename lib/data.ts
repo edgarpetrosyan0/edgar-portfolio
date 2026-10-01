@@ -1,0 +1,118 @@
+export const marquee = [
+  "React 19",
+  "Next.js 16",
+  "Angular 18",
+  "TypeScript",
+  "Redux Toolkit",
+  "RxJS",
+  "Tailwind CSS",
+  "Dashboards",
+  "Real-time UI",
+  "Accessibility",
+];
+
+export const skills: Record<string, string[]> = {
+  Core: ["JavaScript (ES6+)", "TypeScript", "OOP", "HTML5", "CSS3 / SCSS"],
+  "Frameworks & libraries": ["Angular", "React", "Next.js", "Knockout.js"],
+  "State management": [
+    "NgRx",
+    "RxJS",
+    "Redux",
+    "Redux Toolkit",
+    "React Query",
+    "Angular Signals",
+  ],
+  "UI & styling": [
+    "Bootstrap",
+    "Tailwind CSS",
+    "Ant Design",
+    "Shadcn UI",
+    "Kendo UI",
+    "Material UI",
+    "PrimeNG",
+    "Angular Material",
+  ],
+  "API & communication": [
+    "REST",
+    "WebSockets",
+    "GraphQL",
+    "HTTP/HTTPS",
+    "JWT",
+    "OAuth 2.0",
+  ],
+  "Quality & performance": [
+    "Web accessibility",
+    "Browser APIs",
+    "Performance optimization",
+    "SEO",
+  ],
+  Testing: [
+    "Jest",
+    "Jasmine",
+    "Cypress",
+    "Playwright",
+    "React Testing Library",
+  ],
+  "AI-assisted development": ["Claude Code", "Cursor", "OpenAI Codex"],
+  Tools: [
+    "Git / GitHub",
+    "Swagger",
+    "Postman",
+    "Jira",
+    "Azure DevOps",
+    "Vite",
+    "Webpack",
+    "Figma",
+  ],
+};
+
+export const jobs = [
+  {
+    title: "Frontend Engineer · Ideascoll",
+    period: "April 2025 – Present",
+    points: [
+      "Built polished, responsive admin panels and landing pages with React 19, Next.js 15+, TypeScript, Tailwind CSS, Ant Design and Shadcn UI.",
+      "Designed predictable, scalable state management with Redux Toolkit, improving data consistency and developer experience.",
+      "Optimized rendering patterns and component structure for performance and long-term maintainability.",
+      "Worked closely with designers and backend engineers on consistent design systems and smooth API integrations.",
+    ],
+  },
+  {
+    title: "Software Developer (Consultant) · Freelance",
+    period: "February 2024 – April 2025",
+    points: [
+      "Led end-to-end development of several web apps for diverse clients using Angular 18+, React / Next.js, RxJS and Redux Toolkit.",
+      "Owned architecture, type-safe UI and API integrations.",
+      "Refactored legacy codebases with modern patterns, improving maintainability and development speed.",
+      "Turned complex business requirements into intuitive user experiences together with stakeholders.",
+    ],
+  },
+  {
+    title: "Software Developer · Seven Smarts",
+    period: "December 2022 – November 2023",
+    points: [
+      "Built and improved the UniSight admin panel and landing page with Angular 16, TypeScript and SCSS: fully responsive and accessible.",
+      "Designed advanced user management features and optimized complex data workflows for dashboards.",
+      "Improved cross-browser reliability and code quality through systematic refactoring.",
+    ],
+  },
+  {
+    title: "Frontend Engineer · RoboDel",
+    period: "October 2022 – October 2023",
+    points: [
+      "Developed core client flows (landing, ordering, registration) for a robot-powered food delivery platform with Angular 16, RxJS, TypeScript and Tailwind CSS.",
+      "Built real-time interactive components with solid form handling, validation and reactive data streams.",
+      "Contributed to architecture decisions and API integrations with Swagger and Postman.",
+    ],
+  },
+  {
+    title: "Frontend Developer · MerSoft LLC",
+    period: "September 2017 – October 2022",
+    points: [
+      "Owned several production systems, including new modules for the Pigeon Delivery System dashboard and the full Bonee QR Menu product (admin panel, landing page, client interfaces).",
+      "Designed reusable component architectures in Angular 2–13 for faster feature delivery.",
+      "Mentored junior developers on Angular, code quality, debugging and frontend best practices.",
+      "Collaborated across teams to improve UX and keep consumer-facing features stable.",
+    ],
+  },
+];
