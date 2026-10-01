@@ -55,7 +55,7 @@ export const skills: Record<string, string[]> = {
 
 export const jobs = [
   {
-    title: "Frontend Engineer · NDA Client Contract / Freelance",
+    title: "Frontend Engineer · NDA / Freelance",
     period: "September 2026 - Present",
     points: [
       "Developed and integrated responsive web interfaces using modern frontend technologies and established project architecture.",
