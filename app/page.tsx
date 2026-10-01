@@ -2,32 +2,13 @@ import Hero from "@/components/Hero";
 import Counter from "@/components/Counter";
 import Reveal from "@/components/Reveal";
 import { jobs, marquee, skills } from "@/lib/data";
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
+
 
 export default function Home() {
   return (
     <>
-      <nav>
-        <div className="wrap">
-          <Image
-            src="/logo.svg"
-            alt="logo"
-            width={150}
-            height={40}
-            priority
-            sizes="(max-width: 860px) 250px, 340px"
-          />
-          <div className="right">
-            <ul>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a className="cv" href="/Edgar_Petrosyan_CV.pdf" download>CV ↓</a>
-          </div>
-        </div>
-      </nav>
-
+      <Navbar />
       <Hero />
 
       {/* <section id="about">
