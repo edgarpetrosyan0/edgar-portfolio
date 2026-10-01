@@ -6,10 +6,10 @@ const display = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-displa
 const body = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Edgar Petrosyan · Senior Frontend Developer",
+  title: "Edgar Petrosyan · Senior Frontend Engineer ",
   description: "Senior Frontend Developer with 7 years of experience in React, Next.js, Angular and TypeScript. Based in Yerevan, Armenia.",
   openGraph: {
-    title: "Edgar Petrosyan · Senior Frontend Developer",
+    title: "Edgar Petrosyan · Senior Frontend Engineer ",
     description: "React, Next.js, Angular and TypeScript. Admin panels, dashboards and real-time interfaces.",
     images: ["/photo.jpg"],
     type: "website",
