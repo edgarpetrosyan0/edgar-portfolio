@@ -18,12 +18,12 @@ const body = Inter({
 export const metadata: Metadata = {
   title: "Edgar Petrosyan · Senior Frontend Engineer",
   description:
-    "Senior Frontend Developer with 7 years of experience in React, Next.js, Angular and TypeScript. Based in Yerevan, Armenia.",
+    "Senior Frontend Engineer with 7 years of handson experience architecting scalable, high-quality web applications using ReactJs, Next.js and Angular, and TypeScript. Specialized in building complex admin panels, dashboards, realtime features, and performance-critical user experiences. Proven ability to own features endto-end, modernize legacy codebases, implement clean & maintainable architectures, and collaborate effectively with product, design, and backend teams to deliver intuitive, productiongrade solutions in fast-paced environments.",
   openGraph: {
     title: "Edgar Petrosyan · Senior Frontend Engineer",
     description:
-      "React, Next.js, Angular and TypeScript. Admin panels, dashboards and real-time interfaces.",
-    images: ["/photo.jpg"],
+    "Senior Frontend Engineer with 7 years of handson experience architecting scalable, high-quality web applications using ReactJs, Next.js and Angular, and TypeScript. Specialized in building complex admin panels, dashboards, realtime features, and performance-critical user experiences. Proven ability to own features endto-end, modernize legacy codebases, implement clean & maintainable architectures, and collaborate effectively with product, design, and backend teams to deliver intuitive, productiongrade solutions in fast-paced environments.",
+    images: ["/logo.svg"],
     type: "website",
   },
 };
