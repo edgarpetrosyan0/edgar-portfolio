@@ -195,11 +195,11 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="meta-row">
+          <div className="hero-bottom-row">
             <span>◎ Yerevan, Armenia</span>
-            <a href="mailto:edgarpetrosyanak@gmail.com">
-              edgarpetrosyanak@gmail.com
-            </a>
+            <span>
+              ✉ edgarpetrosyanak@gmail.com
+            </span>
           </div>
         </div>
 

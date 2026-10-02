@@ -1,0 +1,304 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+section {
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+}
+
+h2 {
+  font-size: clamp(2rem, 4.6vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.wrap {
+  max-width: 1280px !important;
+}
+.about {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+
+  p {
+    max-width: 62ch;
+    color: $soft-ink;
+  }
+
+  @include max($bp-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-content: start;
+}
+
+.stat {
+  @include card;
+  padding: 1.2rem;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: $crimson;
+  }
+
+  b {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 1.1;
+    @include grad-text;
+  }
+
+  span {
+    color: $muted;
+    font-size: 0.95rem;
+  }
+}
+
+.tl {
+  position: relative;
+  padding-left: 1.8rem;
+  border-left: 2px solid $line;
+}
+
+.job {
+  position: relative;
+  padding-bottom: 2.6rem;
+  opacity: 0;
+  transform: translateX(-14px);
+  @include transition(opacity 0.6s, transform 0.6s);
+
+  &.show {
+    opacity: 1;
+    transform: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.8rem - 7px);
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $bg;
+    border: 3px solid $red;
+    box-shadow: 0 0 14px rgba($red, 0.6);
+  }
+
+  h3 {
+    font-size: 1.45rem;
+    font-weight: 700;
+  }
+
+  ul {
+    padding-left: 1.1rem;
+    max-width: 70ch;
+    color: $soft-ink;
+  }
+
+  li {
+    margin-bottom: 0.4rem;
+
+    &::marker {
+      color: $muted;
+    }
+  }
+
+  @include max($bp-md) {
+    h3 {
+      font-size: 20px;
+    }
+
+    li {
+      font-size: 14px;
+    }
+  }
+}
+
+.meta {
+  color: $muted;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0.2rem 0 0.7rem;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.2rem;
+}
+
+.group {
+  @include card;
+  padding: 1.4rem;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+  cursor: pointer;
+
+  h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.9rem;
+  }
+
+  &:hover {
+    border-color: $muted;
+    transform: translateY(-3px);
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+
+  span {
+    padding: 0.25rem 0.7rem;
+    border-radius: 10px;
+    background: $surface2;
+    border: 1px solid $line;
+    font-size: 0.9rem;
+    @include transition(background 0.2s, border-color 0.2s);
+  }
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+
+  h3 {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+  }
+
+  p {
+    color: $muted;
+  }
+
+  @include max($bp-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-wrap {
+  max-width: 1280px !important;
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 1px solid $line;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba($crimson, 0.12), transparent 32%),
+    radial-gradient(circle at 10% 100%, rgba($wine, 0.1), transparent 32%),
+    $surface;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(3rem, 8vw, 7rem);
+  align-items: center;
+}
+
+.contact-heading {
+  h2 {
+    max-width: 750px;
+    margin: 0;
+    color: $ink;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+
+    span {
+      display: block;
+      color: $muted;
+    }
+  }
+}
+
+.contact-info {
+  max-width: 580px;
+}
+
+.contact-description {
+  margin: 0 0 2rem;
+  color: $soft-ink;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+
+  .btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .btn.main {
+    padding: 0.7rem 1.15rem;
+    font-size: 0.9rem;
+  }
+}
+
+@include max($bp-md) {
+  .contact-card {
+    border-radius: 22px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-heading {
+    h2 {
+      font-size: clamp(3rem, 12vw, 5rem);
+    }
+  }
+}
+
+@include max($bp-sm) {
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-top {
+    margin-bottom: 4rem;
+  }
+
+  .contact-email {
+    font-size: 0.85rem;
+  }
+
+  .contact-links {
+    flex-wrap: wrap;
+
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

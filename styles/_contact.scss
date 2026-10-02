@@ -1,0 +1,76 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// Contact
+.contact {
+  border-radius: 28px;
+  padding: clamp(2rem, 6vw, 4rem);
+
+  h2 {
+    font-size: clamp(26px, 3.6vw, 36px);
+    margin: 0 0 8px;
+    letter-spacing: -0.9px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  p {
+    color: $muted;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin-top: 2rem;
+
+  a {
+    display: block;
+    padding: 1rem 1.2rem;
+    border-radius: 14px;
+    border: 1px solid $line;
+    background: rgba($bg, 0.6);
+    text-decoration: none;
+    @include transition(border-color 0.2s, transform 0.2s);
+
+    small {
+      display: block;
+      color: $muted;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    &:hover {
+      border-color: $muted;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+footer {
+  padding: 2rem 0 3rem;
+  color: $dim;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  h1 .ch,
+  .job,
+  .visual,
+  h1 .line2 {
+    opacity: 1;
+    transform: none;
+  }
+}

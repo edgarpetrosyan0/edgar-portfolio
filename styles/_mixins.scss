@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+// =========================
+// Mixins
+// =========================
+@mixin max($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin transition($props...) {
+  transition: $props;
+}
+
+@mixin grad-text {
+  background: $grad;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin card($radius: 18px) {
+  background: $surface;
+  border: 1px solid $line;
+  border-radius: $radius;
+}

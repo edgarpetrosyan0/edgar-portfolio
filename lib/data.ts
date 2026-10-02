@@ -1,4 +1,5 @@
 export const skills: Record<string, string[]> = {
+
   Core: ["JavaScript (ES6+)", "TypeScript", "OOP", "HTML5", "CSS3 / SCSS"],
   "Frameworks & libraries": ["Angular", "React", "Next.js", "Knockout.js"],
   "State management": [
@@ -63,6 +64,7 @@ export const jobs = [
       "Collaborated cross-functionally with project managers,designers,and backend developers to define requirements, align technical solutions, and deliver high-quality web applications.",
       "Performed comprehensive functional testing across desktop and mobile environments and delivered production-ready implementations.",
     ],
+    stack: ["React", "TypeScript", "Tailwind CSS"], 
   },
   {
     title: "Frontend Engineer · Ideascoll",
@@ -73,6 +75,8 @@ export const jobs = [
       "Optimized rendering patterns and component structure for performance and long-term maintainability.",
       "Worked closely with designers and backend engineers on consistent design systems and smooth API integrations.",
     ],
+   stack: ["React 19", "Next.js 15+", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Ant Design", "Shadcn UI"],
+
   },
   {
     title: "Software Developer (Consultant) · Freelance",
@@ -83,6 +87,8 @@ export const jobs = [
       "Refactored legacy codebases with modern patterns, improving maintainability and development speed.",
       "Turned complex business requirements into intuitive user experiences together with stakeholders.",
     ],
+    stack: ["Angular 18+", "React", "Next.js", "RxJS", "Redux Toolkit"],
+
   },
   {
     title: "Software Developer · Seven Smarts",
@@ -92,6 +98,7 @@ export const jobs = [
       "Designed advanced user management features and optimized complex data workflows for dashboards.",
       "Improved cross-browser reliability and code quality through systematic refactoring.",
     ],
+    stack: ["Angular 16", "TypeScript", "SCSS"],
   },
   {
     title: "Frontend Engineer · RoboDel",
@@ -101,6 +108,7 @@ export const jobs = [
       "Built real-time interactive components with solid form handling, validation and reactive data streams.",
       "Contributed to architecture decisions and API integrations with Swagger and Postman.",
     ],
+   stack: ["Angular 16", "RxJS", "TypeScript", "Tailwind CSS", "Swagger", "Postman"],
   },
   {
     title: "Frontend Developer · MerSoft LLC",
@@ -111,5 +119,7 @@ export const jobs = [
       "Mentored junior developers on Angular, code quality, debugging and frontend best practices.",
       "Collaborated across teams to improve UX and keep consumer-facing features stable.",
     ],
+    stack: ["Angular 2–13", "TypeScript", "RxJS"],
   },
 ];
+

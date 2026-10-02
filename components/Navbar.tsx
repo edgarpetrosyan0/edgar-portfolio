@@ -12,7 +12,8 @@ export default function Navbar() {
     <nav>
       <div className="wrap nav-wrap">
         <a href="/" onClick={closeMenu} className="logo-link">
-          <span className="">Edgar</span>  <svg
+          <span className="">Edgar</span>  
+          <svg
             className="logo-code"
             width="38"
             height="24"
@@ -72,54 +73,54 @@ export default function Navbar() {
             </li>
           </ul>
 
-       <a
-  className="cv"
-  href="/Edgar_Petrosyan_CV.pdf"
-  download="Edgar_Petrosyan_CV.pdf"
-  aria-label="Download CV"
->
-  <span>CV</span>
+          <a
+            className="cv"
+            href="/Edgar_Petrosyan_CV.pdf"
+            download="Edgar_Petrosyan_CV.pdf"
+            aria-label="Download CV"
+          >
+            <span>CV</span>
 
-  <svg
-    className="pdf-icon"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    <path
-      d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+            <svg
+              className="pdf-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
 
-    <path
-      d="M14 2V8H20"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+              <path
+                d="M14 2V8H20"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
 
-    <path
-      d="M8 14H16"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-    />
+              <path
+                d="M8 14H16"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              />
 
-    <path
-      d="M8 17H13"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-    />
-  </svg>
-</a>
+              <path
+                d="M8 17H13"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              />
+            </svg>
+          </a>
         </div>
 
         {/* Mobile */}

@@ -1,0 +1,125 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// =========================
+// Education & languages
+// =========================
+#education {
+  position: relative;
+}
+
+.section-head {
+  margin-bottom: 64px;
+}
+
+.education-grid {
+  display: grid;
+  gap: 80px;
+}
+
+.column-label {
+  margin-bottom: 28px;
+  color: $muted;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.education-column {
+  position: relative;
+}
+
+.education-item {
+  position: relative;
+  display: grid;
+  gap: 24px;
+}
+
+.education-content {
+  padding: 26px 28px;
+  border: 1px solid $line;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(#fff, 0.025), rgba(#fff, 0.008));
+  @include transition(transform 0.3s ease, border-color 0.3s ease, background 0.3s ease);
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba($red, 0.35);
+    background: rgba($red, 0.035);
+  }
+
+  h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 1.35;
+  }
+}
+
+.education-period {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: $red;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.education-degree {
+  margin: 0;
+  color: $muted;
+  line-height: 1.6;
+}
+
+.language-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.language-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 86px;
+  padding: 20px 24px;
+  border: 1px solid $line;
+  border-radius: 16px;
+  background: $surface;
+  @include transition(transform 0.3s ease, border-color 0.3s ease);
+
+  &:hover {
+    transform: translateX(5px);
+    border-color: rgba($red, 0.35);
+  }
+
+  h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+  }
+
+  span {
+    color: $muted;
+    font-size: 13px;
+  }
+
+  strong {
+    color: $line;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+  }
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.logo-code {
+  width: 27px;
+  height: 20px;
+}

@@ -1,0 +1,99 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// Keep CSS custom properties available at runtime
+:root {
+  --bg: #{$bg};
+  --surface: #{$surface};
+  --surface2: #{$surface2};
+  --line: #{$line};
+  --ink: #{$ink};
+  --muted: #{$muted};
+  --red: #{$red};
+  --crimson: #{$crimson};
+  --wine: #{$wine};
+  --grad: #{$grad};
+}
+
+// =========================
+// Base
+// =========================
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  position: relative;
+  background: $bg;
+  color: $ink;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: $waves;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    -webkit-mask-image: linear-gradient(#000 0%, #000 35%, transparent 80%);
+    mask-image: linear-gradient(#000 0%, #000 35%, transparent 80%);
+  }
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid $red;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), sans-serif;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.grad {
+  @include grad-text;
+}
+
+.job-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.job-stack span {
+  padding: 4px 12px;
+  font-size: 13px;
+
+  background: #1a1729;
+  border: 1px solid #2c2740;
+  border-radius: 100px;
+}

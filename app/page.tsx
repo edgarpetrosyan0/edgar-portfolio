@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
-import Reveal from "@/components/Reveal";
-import { jobs, skills } from "@/lib/data";
 import Navbar from "@/components/Navbar";
+import ExperienceItem from "@/components/Experience";
+import { jobs, skills } from "@/lib/data";
 
 
 export default function Home() {
@@ -15,11 +15,16 @@ export default function Home() {
           <h2>Where I've worked</h2>
           <div className="tl">
             {jobs.map((j) => (
-              <Reveal key={j.title}>
+              <ExperienceItem key={j.title}>
                 <h3>{j.title}</h3>
                 <p className="meta">{j.period}</p>
                 <ul>{j.points.map((p) => <li key={p}>{p}</li>)}</ul>
-              </Reveal>
+                {j.stack && (
+                  <div className="job-stack">
+                    {j.stack.map((s) => <span key={s}>{s}</span>)}
+                  </div>
+                )}
+              </ExperienceItem>
             ))}
           </div>
         </div>
@@ -103,34 +108,47 @@ export default function Home() {
 
         </div>
       </section> */}
-      <section id="contact">
-        <div className="wrap">
-          <div className="contact">
-            <h2>Let's build something that thinks</h2>
-            <p>Have a product to build or a codebase to modernize? Send me a message.</p>
-            <div className="cta cta-footer">
-              <a className="btn main" href="mailto:edgarpetrosyanak@gmail.com">
-                edgarpetrosyanak@gmail.com
-              </a>
-              <a
-                className="btn"
-                href="https://www.linkedin.com/in/edgarpetrosyan"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Edgar Petrosyan's LinkedIn profile"
-              >
+      <section id="contact" className="contact-section">
+        <div className="wrap contact-wrap">
+          <div className="contact-card">
 
-                LinkedIn
-              </a>
-              <a
-                className="btn"
-                href="/Edgar_Petrosyan_CV.pdf"
-                download
-              >
-                Download CV
-              </a>
 
+            <div className="contact-content">
+              <div className="contact-heading">
+                <h2>
+                  Let’s talk about
+                  <span>what’s next.</span>
+                </h2>
+              </div>
+
+              <div className="contact-info">
+                <p className="contact-description">
+                  Whether you’re building a new product, improving an existing
+                  application, or looking for an experienced frontend engineer,
+                  I’d be happy to hear about it.
+                </p>
+
+                <div className="contact-links">
+                  <a className="btn main" href="mailto:edgarpetrosyanak@gmail.com">
+                    edgarpetrosyanak@gmail.com
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/edgarpetrosyan"
+                    className="btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+
+                  <a href="/Edgar_Petrosyan_CV.pdf" className="btn" download>
+                    Download CV
+                  </a>
+                </div>
+              </div>
             </div>
+
 
           </div>
         </div>
