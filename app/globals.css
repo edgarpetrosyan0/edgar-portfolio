@@ -965,12 +965,13 @@ footer {
   align-items: center;
   gap: 4px;
   text-decoration: none;
+  font-weight: 800;
 }
 
 .logo-code {
   width: 27px;
   height: 20px;
-} 
+}
 
 .cv {
   display: inline-flex;
@@ -981,4 +982,3 @@ footer {
   font-size: 14px;
   font-weight: 500;
 }
-

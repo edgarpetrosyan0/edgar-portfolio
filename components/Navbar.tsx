@@ -122,7 +122,7 @@ export default function Navbar() {
 </a>
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile */}
         <button
           className={`menu-toggle ${isOpen ? "active" : ""}`}
           onClick={() => setIsOpen(!isOpen)}
@@ -155,7 +155,7 @@ export default function Navbar() {
           download
           onClick={closeMenu}
         >
-          Download CV ↓
+          Download CV
         </a>
       </div>
     </nav>
