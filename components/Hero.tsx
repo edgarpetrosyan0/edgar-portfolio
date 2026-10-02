@@ -173,7 +173,7 @@ export default function Hero() {
 
           <div className="cta">
             <a className="btn main" href="#experience">
-              See my experience →
+              See my experience
             </a>
 
             <a
