@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import JobsManager from "./jobs-manager/page";
-import SkillsManager from "./skills-manager/page";
+import JobsManager from "./jobs-manager/JobsManager";
+import SkillsManager from "./skills-manager/SkillsManager";
 
 
 type Skills = Record<string, string[]>;
