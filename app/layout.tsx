@@ -12,7 +12,7 @@ const display = Plus_Jakarta_Sans({
 const body = Inter({
   subsets: ["latin"],
   variable: "--font-body",
-  display: "swap",
+  display: "swap", 
 });
 
 export const metadata: Metadata = {
