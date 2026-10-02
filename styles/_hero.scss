@@ -75,6 +75,7 @@ h1 {
   .word {
     display: inline-block;
     white-space: nowrap;
+    font-family: $main-font;
   }
 
   .ch {
@@ -89,6 +90,7 @@ h1 {
   .line2 {
     display: block;
     animation: fade 1s 0.7s both;
+    
   }
 }
 

@@ -14,8 +14,8 @@ const PHRASES = [
 const OFFSETS = [0, WORDS[0].length] as const;
 
 export default function Hero() {
-  const titleRef = useRef<HTMLHeadingElement | null>(null);
 
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
   const [typed, setTyped] = useState<string>(PHRASES[0]);
 
 
@@ -63,60 +63,6 @@ export default function Hero() {
     };
   }, []);
 
-
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
-
-    const titleElement = titleRef.current;
-
-    if (!titleElement) {
-      return;
-    }
-
-    const chars = Array.from(
-      titleElement.querySelectorAll<HTMLElement>(".ch")
-    );
-
-    if (chars.length === 0) {
-      return;
-    }
-
-    const onPointerMove = (event: PointerEvent) => {
-      for (const char of chars) {
-        const rect = char.getBoundingClientRect();
-
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-
-        const distance = Math.hypot(
-          event.clientX - centerX,
-          event.clientY - centerY
-        );
-
-        const influence = Math.max(0, 1 - distance / 200);
-
-        const weight = Math.round(700 + 100 * influence);
-
-        char.style.fontVariationSettings = `"wght" ${weight}`;
-      }
-    };
-
-    const resetWeights = () => {
-      for (const char of chars) {
-        char.style.fontVariationSettings = `"wght" 700`;
-      }
-    };
-
-    document.addEventListener("pointermove", onPointerMove);
-    document.addEventListener("pointerleave", resetWeights);
-
-    return () => {
-      document.removeEventListener("pointermove", onPointerMove);
-      document.removeEventListener("pointerleave", resetWeights);
-    };
-  }, []);
 
   return (
     <header className="hero">
@@ -216,7 +162,7 @@ export default function Hero() {
           </div>
 
           <div className="badge">
-            Currently @ <b>Ideascoll</b>
+            Currently @ <b>NDA / Freelance</b>
           </div>
         </div>
       </div>
