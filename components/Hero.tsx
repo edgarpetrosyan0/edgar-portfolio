@@ -118,10 +118,11 @@ export default function Hero() {
           </p>
 
           <div className="cta">
-            <a className="btn main" href="#experience">
+   
+         <a className="btn main" href="#experience">
               See my experience
             </a>
-
+          
             <a
               className="btn"
               href="/Edgar_Petrosyan_CV.pdf"
