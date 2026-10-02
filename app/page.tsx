@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import ExperienceItem from "@/components/Experience";
-import { jobs, skills } from "@/lib/data";
+import { jobs, skills } from "@/types/data";
 
 
 export default function Home() {
