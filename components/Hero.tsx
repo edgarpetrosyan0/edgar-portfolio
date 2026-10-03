@@ -9,7 +9,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const WORDS = ["Edgar", "Petrosyan"] as const;
-const AVAILABILITY = ["Freelance", "Remote", "On-site"] as const;
+const AVAILABILITY = ["On-site", "Remote", "Freelance"] as const;
 
 const PHRASES = [
   "Building Modern Web Applications",
