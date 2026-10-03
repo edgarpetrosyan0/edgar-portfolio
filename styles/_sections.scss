@@ -315,6 +315,8 @@ h2 {
   }
 
   .contact-links {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 1rem;
   }
 }
