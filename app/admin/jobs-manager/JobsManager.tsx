@@ -47,9 +47,9 @@ const createEmptyJob = (): Job => ({
 
 const colors = {
   bg: "#09060a",
-  surface: "#130c10",
-  surface2: "#1b1116",
-  line: "#2e1c23",
+  surface: "#111318",
+  surface2: "#111318",
+  line: "rgba(220, 220, 220, 0.09)",
   ink: "#f7f0f2",
   muted: "#aa9ba2",
   red: "#ff4d5e",
@@ -79,9 +79,6 @@ export default function JobsManager({
   const [deleteIndex, setDeleteIndex] =
     useState<number | null>(null);
 
-  // =========================
-  // Add / Edit
-  // =========================
 
   function openAdd() {
     setEditingIndex(null);
@@ -752,9 +749,6 @@ export default function JobsManager({
         </DialogActions>
       </Dialog>
 
-      {/* =========================
-          Delete Confirmation
-          ========================= */}
 
       <Dialog
         open={deleteOpen}

@@ -9,6 +9,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const WORDS = ["Edgar", "Petrosyan"] as const;
+const AVAILABILITY = ["Freelance", "Remote", "On-site"] as const;
 
 const PHRASES = [
   "Building Modern Web Applications",
@@ -185,9 +186,17 @@ export default function Hero() {
             />
           </div>
 
-          <div className="badge">
-            Currently @ <b>NDA / Freelance</b>
-          </div>
+      <div className="badge">
+  <div className="badge-head">
+    <i aria-hidden="true" />
+    <span>Open to work</span>
+  </div>
+  <ul className="badge-tags">
+    {AVAILABILITY.map((item) => (
+      <li key={item}>{item}</li>
+    ))}
+  </ul>
+</div>
         </div>
       </div>
     </header>

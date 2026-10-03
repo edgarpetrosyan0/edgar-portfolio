@@ -36,9 +36,9 @@ type Props = {
 
 const colors = {
   bg: "#09060a",
-  surface: "#130c10",
-  surface2: "#1b1116",
-  line: "#2e1c23",
+  surface: "#111318",
+  surface2: "#111318",
+  line: "rgba(220, 220, 220, 0.07)",
   ink: "#f7f0f2",
   muted: "#aa9ba2",
   red: "#ff4d5e",
@@ -215,14 +215,23 @@ export default function SkillsManager({
           onClick={openAdd}
           disabled={saving}
           sx={{
-            background: `linear-gradient(90deg, ${colors.red}, ${colors.crimson}, ${colors.wine})`,
+            background: `linear-gradient(
+              90deg,
+              ${colors.red},
+              ${colors.crimson},
+              ${colors.wine}
+            )`,
             color: colors.ink,
             textTransform: "none",
             fontWeight: 600,
             boxShadow: "none",
 
             "&:hover": {
-              background: `linear-gradient(90deg, ${colors.crimson}, ${colors.wine})`,
+              background: `linear-gradient(
+                90deg,
+                ${colors.crimson},
+                ${colors.wine}
+              )`,
               boxShadow:
                 "0 6px 20px rgba(255, 77, 94, 0.18)",
             },
@@ -304,6 +313,7 @@ export default function SkillsManager({
                   fontWeight: 600,
                   color: colors.muted,
                   borderBottom: `1px solid ${colors.line}`,
+                  width: 120,
                 }}
               >
                 Actions
@@ -341,6 +351,7 @@ export default function SkillsManager({
                     },
                   }}
                 >
+                  {/* Number */}
                   <TableCell
                     sx={{
                       color: colors.dim,
@@ -350,6 +361,7 @@ export default function SkillsManager({
                     {index + 1}
                   </TableCell>
 
+                  {/* Category */}
                   <TableCell
                     sx={{
                       fontWeight: 500,
@@ -360,6 +372,7 @@ export default function SkillsManager({
                     {category}
                   </TableCell>
 
+                  {/* Skills */}
                   <TableCell
                     sx={{
                       borderBottom: `1px solid ${colors.line}`,
@@ -378,22 +391,22 @@ export default function SkillsManager({
                           label={skill}
                           size="small"
                           sx={{
-                            backgroundColor:
-                              "rgba(163, 21, 79, 0.18)",
-                            border:
-                              "1px solid rgba(163, 21, 79, 0.35)",
+                            backgroundColor: colors.surface2,
                             color: colors.softInk,
-                            fontWeight: 500,
+                            border: `1px solid ${colors.line}`,
+                            borderRadius: 1,
 
                             "& .MuiChip-label": {
                               px: 1,
                             },
+                            
                           }}
                         />
                       ))}
                     </Stack>
                   </TableCell>
 
+                  {/* Actions */}
                   <TableCell
                     align="right"
                     sx={{
@@ -476,8 +489,11 @@ export default function SkillsManager({
         <DialogContent>
           <Stack
             spacing={2.5}
-            sx={{ mt: 2 }}
+            sx={{
+              mt: 2,
+            }}
           >
+            {/* Category */}
             <TextField
               label="Category Name"
               fullWidth
@@ -519,6 +535,7 @@ export default function SkillsManager({
               }}
             />
 
+            {/* Skills */}
             <TextField
               label="Skills (one per line)"
               fullWidth
@@ -595,14 +612,22 @@ export default function SkillsManager({
             onClick={handleSave}
             disabled={saving}
             sx={{
-              background: `linear-gradient(90deg, ${colors.red}, ${colors.crimson})`,
+              background: `linear-gradient(
+                90deg,
+                ${colors.red},
+                ${colors.crimson}
+              )`,
               color: colors.ink,
               textTransform: "none",
               fontWeight: 600,
               boxShadow: "none",
 
               "&:hover": {
-                background: `linear-gradient(90deg, ${colors.crimson}, ${colors.wine})`,
+                background: `linear-gradient(
+                  90deg,
+                  ${colors.crimson},
+                  ${colors.wine}
+                )`,
               },
             }}
           >
@@ -646,9 +671,12 @@ export default function SkillsManager({
               color: colors.softInk,
             }}
           >
-            Are you sure you want to delete
+            Are you sure you want to delete{" "}
+            <strong>
+              {deleteCategory}
+            </strong>
+            ?
           </Typography>
-
         </DialogContent>
 
         <DialogActions
@@ -682,9 +710,6 @@ export default function SkillsManager({
               fontWeight: 600,
               boxShadow: "none",
 
-              "&:hover": {
-                background: colors.crimson,
-              },
             }}
           >
             {saving ? "Deleting..." : "Delete"}

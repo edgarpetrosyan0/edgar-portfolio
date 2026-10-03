@@ -30,7 +30,7 @@ export default function AdminPage() {
       sessionStorage.getItem("admin-password");
 
     if (!storedPassword) {
-      router.replace("/admin/login");
+      router.replace("/auth/login");
       return;
     }
 
@@ -74,7 +74,7 @@ export default function AdminPage() {
 
   function handleLogout() {
     sessionStorage.removeItem("admin-password");
-    router.replace("/admin/login");
+    router.replace("/auth/login");
   }
 
   if (!password) {
