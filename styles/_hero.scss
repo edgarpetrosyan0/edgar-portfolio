@@ -343,7 +343,9 @@ h1 {
 }
 
 @include max($bp-sm) {
-  .btn {
-    font-size: 11px;
+
+  .hero-bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
