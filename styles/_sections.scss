@@ -131,7 +131,6 @@ h2 {
   gap: 1.2rem;
 }
 
-
 .group {
   @include card;
   padding: 1.4rem;
@@ -315,8 +314,9 @@ h2 {
   }
 
   .contact-links {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr ;
-    gap: 1rem;
+    width: 100px;
   }
 }
