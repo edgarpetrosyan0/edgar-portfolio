@@ -9,10 +9,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const WORDS = ["Edgar", "Petrosyan"] as const;
-const AVAILABILITY = ["On-site", "Remote", "Freelance"] as const;
+const AVAILABILITY = ["On-site", "Remote", "Hybrid"] as const;
 
 const PHRASES = [
-  "Building Modern Web Applications",
+   "Building Modern Web Applications",
   "Creating High-Performance Interfaces",
   "Developing Complex Web Applications",
 ] as const;
@@ -113,7 +113,7 @@ export default function Hero() {
             applications using <br />
             <strong>ReactJS, Next.js and Angular</strong>, and TypeScript.
             Specialized in building complex admin panels, dashboards,
-            realtime features, and performance-critical user experiences.
+            real-time features, and performance-critical user experiences.
             Proven ability to own features end-to-end, modernize legacy
             codebases, implement clean & maintainable architectures, and
             collaborate effectively with product, design, and backend teams to
@@ -186,17 +186,17 @@ export default function Hero() {
             />
           </div>
 
-      <div className="badge">
-  <div className="badge-head">
-    <i aria-hidden="true" />
-    <span>Open to work</span>
-  </div>
-  <ul className="badge-tags">
-    {AVAILABILITY.map((item) => (
-      <li key={item}>{item}</li>
-    ))}
-  </ul>
-</div>
+          <div className="badge">
+            <div className="badge-head">
+              <i aria-hidden="true" />
+              <span>Open to work</span>
+            </div>
+            <ul className="badge-tags">
+              {AVAILABILITY.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </header>
