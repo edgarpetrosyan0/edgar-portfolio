@@ -1,9 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-// =========================
-// Hero
-// =========================
+ 
 .hero {
   position: relative;
   overflow: hidden;
@@ -336,7 +334,7 @@ h1 {
     max-width: calc(100% - 16px);
     padding: 0.6rem 1.1rem;
     border-radius: 20px;
-    align-items: center;
+    align-items: baseline;
     text-align: center;
 
     .badge-head {
