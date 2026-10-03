@@ -70,6 +70,12 @@ nav {
   text-decoration: none;
   @include transition(border-color 0.2s, transform 0.2s, background 0.2s);
 
+  .cv-content {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
   &:hover {
     border-color: $red;
     background: $surface2;

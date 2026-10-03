@@ -3,6 +3,11 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 const WORDS = ["Edgar", "Petrosyan"] as const;
 
 const PHRASES = [
@@ -14,10 +19,8 @@ const PHRASES = [
 const OFFSETS = [0, WORDS[0].length] as const;
 
 export default function Hero() {
-
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   const [typed, setTyped] = useState<string>(PHRASES[0]);
-
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -55,14 +58,12 @@ export default function Hero() {
     };
 
     setTyped("");
-
     timeoutId = setTimeout(tick, 900);
 
     return () => {
       clearTimeout(timeoutId);
     };
   }, []);
-
 
   return (
     <header className="hero">
@@ -106,23 +107,23 @@ export default function Hero() {
           </p>
 
           <p className="lede">
-            Senior Frontend Engineer with  <strong>7 years</strong> of handson experience architecting scalable,
-             high-quality
-            web applications using <br></br><strong>ReactJs, Next.js and Angular</strong>, and TypeScript. Specialized in
-            building complex admin panels, dashboards, realtime features, and performance-critical user
-            experiences. Proven ability to own features endto-end, modernize legacy codebases, implement
-            clean & maintainable architectures, and
-            collaborate effectively with product, design, and
-            backend teams to deliver intuitive, productiongrade solutions in fast-paced environments.
-
+            Senior Frontend Engineer with <strong>7 years</strong> of
+            hands-on experience architecting scalable, high-quality web
+            applications using <br />
+            <strong>ReactJS, Next.js and Angular</strong>, and TypeScript.
+            Specialized in building complex admin panels, dashboards,
+            realtime features, and performance-critical user experiences.
+            Proven ability to own features end-to-end, modernize legacy
+            codebases, implement clean & maintainable architectures, and
+            collaborate effectively with product, design, and backend teams to
+            deliver intuitive, production-grade solutions in fast-paced
+            environments.
           </p>
 
           <div className="cta">
-   
-         <a className="btn main" href="#experience">
+            <a className="btn main" href="#experience">
               See my experience
             </a>
-          
             <a
               className="btn"
               href="/Edgar_Petrosyan_CV.pdf"
@@ -130,23 +131,45 @@ export default function Hero() {
             >
               Download CV
             </a>
-
-            <a
-              className="btn"
-              href="https://www.linkedin.com/in/edgarpetrosyan"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Open Edgar Petrosyan's LinkedIn profile"
-            >
-              LinkedIn
-            </a>
           </div>
 
           <div className="hero-bottom-row">
-            <span>◎ Yerevan, Armenia</span>
-            <span>
-              ✉ edgarpetrosyanak@gmail.com
-            </span>
+            <div className="icon-wrapper">
+              <LocationOnOutlinedIcon fontSize="small" />
+              <span>Yerevan, Armenia</span>
+            </div>
+
+            <a
+              className="icon-wrapper"
+              href="mailto:edgarpetrosyanak@gmail.com"
+            >
+              <EmailOutlinedIcon fontSize="small" />
+              <span>edgarpetrosyanak@gmail.com</span>
+            </a>
+
+            <a
+              className="icon-wrapper"
+              href="https://www.linkedin.com/in/edgarpetrosyan"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <LinkedInIcon fontSize="small" />
+              <span>LinkedIn</span>
+            </a>
+
+            <a
+              className="icon-wrapper"
+              href="https://github.com/YOUR_USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <GitHubIcon fontSize="small" />
+              <span>GitHub</span>
+            </a>
           </div>
         </div>
 
