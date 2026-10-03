@@ -160,7 +160,7 @@ export default function Home() {
 
                   <a
                     className="icon-wrapper"
-                    href="https://github.com/YOUR_USERNAME"
+                    href="https://github.com/edgarpetrosyan0"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
