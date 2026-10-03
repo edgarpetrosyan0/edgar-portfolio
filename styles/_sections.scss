@@ -225,7 +225,10 @@ h2 {
 
     span {
       display: block;
-      color: $muted;
+      background: linear-gradient(90deg, #ffb347 0%, #ff5a1f 50%, #e53935 100%);
+      color: #0000;
+      -webkit-background-clip: text;
+      background-clip: text;
     }
   }
 }
