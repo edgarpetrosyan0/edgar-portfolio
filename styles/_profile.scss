@@ -228,13 +228,13 @@ h1 {
   }
 
   &::before {
-    inset: -6% -26% -6% 10%;
+    inset:-3% -9% 4% 11%  ;
     background: linear-gradient(135deg, $crimson, #7a1038);
     transform: rotate(14deg);
   }
 
   &::after {
-    inset: 12% 10% -14% -24%;
+    inset: 7% 11% 8% -10%;
     background: linear-gradient(135deg, #ff7a45, $wine);
     opacity: 0.45;
     transform: rotate(-12deg);

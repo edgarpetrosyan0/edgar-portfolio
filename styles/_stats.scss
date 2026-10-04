@@ -14,7 +14,7 @@
   @include card;
   position: relative;
   height: 120px;
-  padding: 2.4rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +34,6 @@
   background: $grad;
   -webkit-background-clip: text;
   background-clip: text;
-
   color: transparent;
 }
 
@@ -43,10 +42,8 @@
 }
 
 .stat-label {
-  margin-top: 14px;
-
+  margin-top: 8px;
   color: $muted;
-
   font-size: 14px;
   letter-spacing: 0.04em;
 }

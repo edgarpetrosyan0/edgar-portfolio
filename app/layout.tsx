@@ -20,7 +20,7 @@ const description =
   "Senior Frontend Engineer with 8+ years of experience building scalable React, Next.js and Angular apps, dashboards and real-time features.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://edgar-portfolio-coral.vercel.app/"), 
+  metadataBase: new URL("https://edgar-portfolio-coral.vercel.app/"),
   title,
   description,
   openGraph: {
@@ -29,11 +29,20 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Edgar Petrosyan",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Edgar Petrosyan — Senior Frontend Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: ["/opengraph-image.png"],
   },
 };
 
