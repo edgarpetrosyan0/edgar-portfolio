@@ -17,7 +17,7 @@ const body = Inter({
 
 const title = "Edgar Petrosyan · Senior Frontend Engineer";
 const description =
-  "Senior Frontend Engineer with 7 years of experience building scalable React, Next.js and Angular apps, dashboards and real-time features.";
+  "Senior Frontend Engineer with 8+ years of experience building scalable React, Next.js and Angular apps, dashboards and real-time features.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://edgar-portfolio-coral.vercel.app/"), 

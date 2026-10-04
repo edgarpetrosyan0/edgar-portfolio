@@ -1,0 +1,62 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.stats {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 760px;
+  margin-top: 70px;
+  display: grid;
+  overflow: hidden;
+}
+
+.stat {
+  position: relative;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  background: $surface;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.stat-number {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  background: $grad;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 30px;
+}
+
+.stat-number.infinity {
+  font-size: 70px;
+}
+
+.stat-label {
+  margin-top: 14px;
+  color: $muted;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.stat-label-infinity {
+  position: relative;
+  top: -20px;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat {
+    min-height: 130px;
+  }
+}

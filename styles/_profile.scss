@@ -2,7 +2,7 @@
 @use "mixins" as *;
 
  
-.hero {
+.profile {
   position: relative;
   overflow: hidden;
   padding: clamp(3rem, 8vw, 6rem) 0 clamp(3rem, 7vw, 5rem);
@@ -26,7 +26,7 @@
   }
 }
 
-.hero-grid {
+.profile-grid {
   position: relative;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -187,7 +187,7 @@ h1 {
   }
 }
 
-.hero-bottom-row {
+.profile-bottom-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -358,8 +358,10 @@ h1 {
 }
 
 @include max($bp-sm) {
-  .hero-bottom-row {
+  .profile-bottom-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
+
+

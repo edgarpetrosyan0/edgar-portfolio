@@ -1,23 +1,27 @@
-import Hero from "@/components/Hero";
+'use client'
+
+import ProfileHeader from "@/components/ProfileHeader";
 import Navbar from "@/components/Navbar";
 import ExperienceItem from "@/components/Experience";
 import { jobs, skills } from "@/types/data";
 
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { DownloadDoneOutlined, DownloadOutlined } from "@mui/icons-material";
-
+import {  DownloadOutlined } from "@mui/icons-material";
 
 export default function Home() {
+
+
   return (
     <>
+
       <Navbar />
-      <Hero />
+      <ProfileHeader />
+
 
       <section id="experience">
-        <div className="wrap">
+        <div className="wrapper">
           <h2>Where I've worked</h2>
           <div className="tl">
             {jobs.map((j) => (
@@ -37,7 +41,7 @@ export default function Home() {
       </section>
 
       <section id="skills">
-        <div className="wrap">
+        <div className="wrapper">
           <h2>What I build with</h2>
           <div className="skills">
             {Object.entries(skills).map(([group, tags]) => (
@@ -51,7 +55,7 @@ export default function Home() {
       </section>
 
       {/* <section id="education">
-        <div className="wrap">
+        <div className="wrapper">
           <div className="language-list">
             <div className="languages-column">
               <h2> Languages</h2>
@@ -115,7 +119,7 @@ export default function Home() {
         </div>
       </section> */}
       <section id="contact" className="contact-section">
-        <div className="wrap contact-wrap">
+        <div className="wrapper contact-wrap">
           <div className="contact-card">
 
 
@@ -131,12 +135,12 @@ export default function Home() {
                 <p className="contact-description">
                   Whether you’re building a new product, improving an existing
                   application, or looking for an experienced frontend engineer,
-                  I’d be happy to hear about it. 
+                  I’d be happy to hear about it.
                 </p>
 
-               
+
                 <div className="contact-links">
-             
+
 
                   <a
                     className="icon-wrapper"
@@ -170,15 +174,15 @@ export default function Home() {
                     <span>GitHub</span>
                   </a>
 
-                   <a href="/Edgar_Petrosyan_CV.pdf"  className="icon-wrapper" download>
-                    <span  className="download-cv">
-                    <DownloadOutlined />
+                  <a href="/Edgar_Petrosyan_CV.pdf" className="icon-wrapper" download>
+                    <span className="download-cv">
+                      <DownloadOutlined />
                       Download CV</span>
                   </a>
 
-                  
+
                 </div>
-                
+
               </div>
             </div>
 

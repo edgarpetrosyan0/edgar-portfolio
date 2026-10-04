@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className="wrap nav-wrap">
+      <div className="wrapper nav-wrap">
         <a href="/" onClick={closeMenu} className="logo-link">
           <span className="">Edgar</span>
          <svg

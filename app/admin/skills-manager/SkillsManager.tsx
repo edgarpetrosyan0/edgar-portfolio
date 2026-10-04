@@ -381,7 +381,7 @@ export default function SkillsManager({
                     <Stack
                       direction="row"
                       sx={{
-                        flexWrap: "wrap",
+                        flexWrap: "wrapper",
                         gap: 0.5,
                       }}
                     >

@@ -7,19 +7,20 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Stats from "./Stats";
 
 const WORDS = ["Edgar", "Petrosyan"] as const;
 const AVAILABILITY = ["On-site", "Remote", "Hybrid"] as const;
 
 const PHRASES = [
-   "Building Modern Web Applications",
+  "Building Modern Web Applications",
   "Creating High-Performance Interfaces",
   "Developing Complex Web Applications",
 ] as const;
 
 const OFFSETS = [0, WORDS[0].length] as const;
 
-export default function Hero() {
+export default function ProfileHeader() {
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   const [typed, setTyped] = useState<string>(PHRASES[0]);
 
@@ -67,8 +68,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <header className="hero">
-      <div className="wrap hero-grid">
+    <div className="profile">
+      <div className="wrapper profile-grid">
         <div>
           <h1
             ref={titleRef}
@@ -108,7 +109,7 @@ export default function Hero() {
           </p>
 
           <p className="lede">
-            Senior Frontend Engineer with <strong>7 years</strong> of
+            Senior Frontend Engineer with <strong>8+ years</strong> of
             hands-on experience architecting scalable, high-quality web
             applications using <br />
             <strong>ReactJS, Next.js and Angular</strong>, and TypeScript.
@@ -134,7 +135,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="hero-bottom-row">
+          <div className="profile-bottom-row">
             <div className="icon-wrapper">
               <LocationOnOutlinedIcon fontSize="small" />
               <span>Yerevan, Armenia</span>
@@ -172,6 +173,7 @@ export default function Hero() {
               <span>GitHub</span>
             </a>
           </div>
+
         </div>
 
         <div className="visual">
@@ -199,6 +201,11 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </header>
+          <div className="stack-section profile-section">
+              <div className="wrapper">
+                <Stats />
+            </div>
+          </div>
+    </div>
   );
 }
