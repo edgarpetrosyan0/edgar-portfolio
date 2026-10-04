@@ -33,29 +33,7 @@ h2 {
   align-content: start;
 }
 
-.stat {
-  @include card;
-  padding: 1.2rem;
-  transition: border-color 0.2s;
 
-  &:hover {
-    border-color: $crimson;
-  }
-
-  b {
-    display: block;
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 2.4rem;
-    line-height: 1.1;
-    @include grad-text;
-  }
-
-  span {
-    color: $muted;
-    font-size: 0.95rem;
-  }
-}
 
 .tl {
   position: relative;

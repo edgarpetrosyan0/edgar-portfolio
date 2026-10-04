@@ -2,37 +2,40 @@
 @use "mixins" as *;
 
 .stats {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 100%;
   max-width: 760px;
   margin-top: 70px;
-  display: grid;
   overflow: hidden;
 }
 
 .stat {
+  @include card;
   position: relative;
   height: 120px;
+  padding: 2.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 32px;
   background: $surface;
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease;
+
+  &:hover {
+    border-color: $crimson;
+  }
 }
 
 .stat-number {
-  font-family: var(--font-display), sans-serif;
-  font-size: clamp(42px, 5vw, 64px);
+  font-family: $main-font;
+  font-size: 35px;
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.05em;
   background: $grad;
   -webkit-background-clip: text;
   background-clip: text;
+
   color: transparent;
-  font-size: 30px;
 }
 
 .stat-number.infinity {
@@ -41,7 +44,9 @@
 
 .stat-label {
   margin-top: 14px;
+
   color: $muted;
+
   font-size: 14px;
   letter-spacing: 0.04em;
 }
@@ -51,12 +56,38 @@
   top: -20px;
 }
 
-@media (max-width: 768px) {
+// Mobile
+@include max($bp-lg) {
   .stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    margin-top: 40px;
   }
 
   .stat {
-    min-height: 130px;
+    height: 95px;
+    min-height: 95px;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 26px;
+  }
+
+  .stat-number.infinity {
+    font-size: 48px;
+  }
+
+  .stat-label {
+    margin-top: 8px;
+    font-size: 11px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .stat-label-infinity {
+    top: -10px;
   }
 }

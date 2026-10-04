@@ -1,7 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-// Keep CSS custom properties available at runtime
 :root {
   --bg: #{$bg};
   --surface: #{$surface};
@@ -15,9 +14,6 @@
   --grad: #{$grad};
 }
 
-// =========================
-// Base
-// =========================
 * {
   box-sizing: border-box;
   margin: 0;
@@ -92,7 +88,6 @@ h3 {
 .job-stack span {
   padding: 4px 12px;
   font-size: 13px;
-  //background: #1a1729;
   border: 1px solid #2c2740;
   border-radius: 100px;
 }

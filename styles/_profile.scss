@@ -1,7 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
 
- 
 .profile {
   position: relative;
   overflow: hidden;
@@ -245,8 +244,19 @@ h1 {
   @include max($bp-lg) {
     order: -1;
     width: min(62%, 250px);
-    justify-self: start;
     margin-bottom: 1rem;
+
+    &::before {
+      inset: -2% -10% -2% 6%;
+      filter: blur(18px);
+      opacity: 0.3;
+    }
+
+    &::after {
+      inset: 8% 6% -8% -10%;
+      filter: blur(18px);
+      opacity: 0.18;
+    }
   }
 }
 
@@ -363,5 +373,3 @@ h1 {
     grid-template-columns: 1fr 1fr;
   }
 }
-
-
