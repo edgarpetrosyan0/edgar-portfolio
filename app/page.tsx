@@ -8,7 +8,7 @@ import { jobs, skills } from "@/types/data";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import {  DownloadOutlined } from "@mui/icons-material";
+import { DownloadOutlined } from "@mui/icons-material";
 
 export default function Home() {
 
@@ -22,18 +22,32 @@ export default function Home() {
 
       <section id="experience">
         <div className="wrapper">
-          <h2>Where I've worked</h2>
-          <div className="tl">
-            {jobs.map((j) => (
+          <h2>Career Journey</h2>
+          <div className="exp-list">
+            {jobs.map((j, i) => (
               <ExperienceItem key={j.title}>
-                <h3>{j.title}</h3>
-                <p className="meta">{j.period}</p>
-                <ul>{j.points.map((p) => <li key={p}>{p}</li>)}</ul>
-                {j.stack && (
-                  <div className="job-stack">
-                    {j.stack.map((s) => <span key={s}>{s}</span>)}
-                  </div>
-                )}
+                <div className="exp-side">
+                  <span className="exp-index">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="exp-period">{j.period}</span>
+                </div>
+
+                <div className="exp-card">
+                  <h3>{j.title}</h3>
+
+                  <ul>
+                    {j.points.map((p) => (
+                      <li key={p}>{p}</li>
+                    ))}
+                  </ul>
+
+                  {j.stack && (
+                    <div className="exp-stack">
+                      {j.stack.map((s) => (
+                        <span key={s}>{s}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </ExperienceItem>
             ))}
           </div>
@@ -42,7 +56,7 @@ export default function Home() {
 
       <section id="skills">
         <div className="wrapper">
-          <h2>What I build with</h2>
+          <h2>Technical Skills</h2>
           <div className="skills">
             {Object.entries(skills).map(([group, tags]) => (
               <div className="group" key={group}>

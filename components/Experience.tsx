@@ -33,7 +33,7 @@ export default function ExperienceItem({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <article ref={ref} className={visible ? "job show" : "job"}>
+    <article ref={ref} className={visible ? "exp-item show" : "exp-item"}>
       {children}
     </article>
   );
