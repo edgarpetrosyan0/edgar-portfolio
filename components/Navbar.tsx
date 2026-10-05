@@ -123,22 +123,18 @@ export default function Navbar() {
         <a href="#contact" onClick={closeMenu}>
           Contact
         </a>
-
-        <div className="mobile-theme">
-          <span>Theme</span>
-          <ThemeToggle />
-        </div>
-
         <a
-          className="mobile-cv"
           href="/documents/Edgar_Petrosyan_CV.pdf"
           download
           onClick={closeMenu}
         >
-          <DownloadOutlined />
           Download CV
         </a>
+           <div className="mobile-theme">
+          <ThemeToggle />
+        </div>
       </div>
+       
     </nav>
   );
 }
