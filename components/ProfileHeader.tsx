@@ -169,9 +169,7 @@ export default function ProfileHeader() {
               priority
               sizes="(max-width: 860px) 250px, 340px"
             />
-          </div>
-
-          <div className="badge">
+                <div className="badge">
             <div className="badge-head">
               <i aria-hidden="true" />
               <span>Open to work</span>
@@ -182,6 +180,9 @@ export default function ProfileHeader() {
               ))}
             </ul>
           </div>
+          </div>
+
+      
         </div>
       </div>
 
