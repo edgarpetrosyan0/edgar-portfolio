@@ -112,7 +112,7 @@ export default function ProfileHeader() {
             Senior Frontend Engineer with <strong>8+ years</strong> of
             hands-on experience architecting scalable, high-quality web
             applications using <br />
-            <strong>ReactJS, Next.js and Angular</strong>, and TypeScript.
+            <strong>React, Next.js and Angular</strong>, and TypeScript.
             Specialized in building complex admin panels, dashboards,
             real-time features, and performance-critical user experiences.
             Proven ability to own features end-to-end, modernize legacy

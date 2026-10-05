@@ -1,13 +1,13 @@
 {
   "skills": {
-    "Core": ["JavaScript (ES6+)", "TypeScript", "OOP", "HTML5", "CSS3 / SCSS"],
+    "Core": ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3 / SCSS"],
     "Frameworks & libraries": ["Angular", "React", "Next.js", "Knockout.js"],
     "State management": [
-      "NgRx",
-      "RxJS",
       "Redux",
       "Redux Toolkit",
       "React Query",
+      "NgRx",
+      "RxJS",
       "Angular Signals"
     ],
     "UI & styling": [
@@ -60,7 +60,7 @@
       "points": [
         "Developed and integrated responsive web interfaces using modern frontend technologies and established project architecture.",
         "Designed and integrated secure user flows, including authentication state management and post-authentication navigation.",
-        "Collaborated cross-functionally with project managers,designers,and backend developers to define requirements, align technical solutions, and deliver high-quality web applications.",
+        "Collaborated cross-functionally with project managers, designers, and backend developers to define requirements, align technical solutions, and deliver high-quality web applications.",
         "Performed comprehensive functional testing across desktop and mobile environments and delivered production-ready implementations."
       ],
       "stack": ["React", "TypeScript", "Tailwind CSS"]
@@ -74,7 +74,15 @@
         "Optimized rendering patterns and component structure for performance and long-term maintainability.",
         "Worked closely with designers and backend engineers on consistent design systems and smooth API integrations."
       ],
-      "stack": ["React 19", "Next.js 15+", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Ant Design", "Shadcn UI"]
+      "stack": [
+        "React 19",
+        "Next.js 15+",
+        "TypeScript",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "Ant Design",
+        "Shadcn UI"
+      ]
     },
     {
       "title": "Software Developer (Consultant) · Freelance",
@@ -105,7 +113,14 @@
         "Built real-time interactive components with solid form handling, validation and reactive data streams.",
         "Contributed to architecture decisions and API integrations with Swagger and Postman."
       ],
-      "stack": ["Angular 16", "RxJS", "TypeScript", "Tailwind CSS", "Swagger", "Postman"]
+      "stack": [
+        "Angular 16",
+        "RxJS",
+        "TypeScript",
+        "Tailwind CSS",
+        "Swagger",
+        "Postman"
+      ]
     },
     {
       "title": "Frontend Developer · MerSoft LLC",
