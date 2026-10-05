@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .profile {
-  --nav-h: 90px; 
+  --nav-h: 90px;
   position: relative;
   overflow: hidden;
   padding: calc(var(--nav-h) + 16px) 0 0;
@@ -104,10 +104,12 @@
   .line2 {
     display: block;
     animation: fade 1s 0.7s both;
+    font-family: $main-font, sans-serif;
   }
 
   @include max($bp-sm) {
     margin: 1rem 0;
+    font-size: 25px;
   }
 }
 
@@ -128,13 +130,11 @@
 .typed {
   min-height: 1.5em;
   margin-bottom: 1.2rem;
-
   font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(1.1rem, 2.4vw, 1.45rem);
   line-height: 1.4;
   color: var(--ink);
-
 
   &::after {
     content: "";
@@ -145,6 +145,10 @@
     background: var(--muted);
     vertical-align: -0.15em;
     animation: blink 1s steps(1) infinite;
+  }
+
+  @include max($bp-sm) {
+    font-size: 13px;
   }
 }
 
@@ -194,7 +198,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px; 
+  min-height: 44px;
   padding: 0.8rem 1.4rem;
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -244,11 +248,10 @@
   margin-top: 2rem;
   color: var(--dim);
 
-   @include max($bp-sm) {
-       display: grid;
+  @include max($bp-sm) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
 
   .icon-wrapper {
     display: inline-flex;
@@ -266,7 +269,6 @@
       color: var(--crimson);
     }
   }
-
 }
 .visual {
   position: relative;
