@@ -1,14 +1,26 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
+
 nav {
-  position: sticky;
+ position: fixed;   // was: sticky
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
 
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 
+  &.scrolled {
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+  }
+  
   .wrapper {
     display: flex;
     align-items: center;
@@ -72,29 +84,13 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-
   padding: 0.45rem 0.9rem;
   border-radius: 10px;
-
   color: var(--ink);
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
-
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, #ffb347 9%, transparent),
-    color-mix(in srgb, #ff3d00 7%, transparent)
-  );
-
   border: 1px solid color-mix(in srgb, var(--line) 65%, transparent);
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  box-shadow:
-    inset 0 1px 0 color-mix(in srgb, var(--surface) 45%, transparent),
-    0 4px 20px color-mix(in srgb, var(--ink) 8%, transparent);
 
   @include transition(
     border-color 0.2s,
@@ -110,35 +106,25 @@ nav {
   }
 
   &:hover {
-    transform: translateY(-1px);
-
     border-color: color-mix(in srgb, var(--red) 45%, var(--line));
-
     background: linear-gradient(
       135deg,
       color-mix(in srgb, #ffb347 14%, transparent),
       color-mix(in srgb, #ff3d00 11%, transparent)
     );
-
-    box-shadow: 0 6px 20px color-mix(in srgb, var(--red) 10%, transparent);
   }
 }
 
 .menu-toggle {
   display: none;
-
   width: 42px;
   height: 42px;
   padding: 0;
-
   border: 1px solid var(--line);
   border-radius: 10px;
-
   background: var(--surface);
   color: var(--ink);
-
   cursor: pointer;
-
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -162,7 +148,6 @@ nav {
     @include transition(transform 0.25s ease, opacity 0.2s ease);
   }
 
-  // Hamburger → X
   &.active {
     span:nth-child(1) {
       transform: translateY(7px) rotate(45deg);
@@ -189,13 +174,10 @@ nav {
   @include max($bp-sm) {
     display: flex;
     flex-direction: column;
-
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-
     padding: 0 1.25rem;
-
     border-top: 1px solid transparent;
 
     @include transition(
@@ -217,17 +199,12 @@ nav {
 
     a {
       display: block;
-
       padding: 0.85rem 0;
-
       color: var(--muted);
       text-decoration: none;
-
       font-size: 1rem;
       font-weight: 500;
-
       border-bottom: 1px solid var(--line);
-
       transition:
         color 0.2s ease,
         padding-left 0.2s ease;
@@ -261,7 +238,6 @@ nav {
 
   &:hover {
     border-color: color-mix(in srgb, var(--red) 45%, var(--line));
-
     box-shadow: 0 4px 18px color-mix(in srgb, var(--red) 10%, transparent);
   }
 
@@ -272,34 +248,24 @@ nav {
 
   .theme-toggle-track {
     position: relative;
-
     display: flex;
     align-items: center;
-
     width: 100%;
     height: 100%;
   }
 
   .theme-toggle-icon {
     position: absolute;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 24px;
     height: 24px;
-
     border-radius: 50%;
-
     font-size: 17px;
-
     background: linear-gradient(135deg, #ffb347 0%, #ff5a1f 50%, #e53935 100%);
-
     color: #fff;
-
     box-shadow: 0 2px 8px color-mix(in srgb, var(--red) 25%, transparent);
-
     transition:
       transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
       background 0.25s ease;

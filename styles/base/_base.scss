@@ -98,13 +98,10 @@ body {
 
   &::before {
     content: "";
-
     position: fixed;
     inset: 0;
     z-index: -1;
-
     pointer-events: none;
-
     background-image: $waves;
     background-size: cover;
     background-position: center top;
@@ -131,7 +128,7 @@ a {
 .wrapper {
   max-width: 1280px !important;
   margin: 0 auto;
-  padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+  padding: 0 30px;
 }
 
 h1,
@@ -139,7 +136,6 @@ h2,
 h3 {
   font-family: var(--font-display), sans-serif;
   color: var(--ink);
-
   line-height: 1.08;
   letter-spacing: -0.02em;
 }
@@ -157,15 +153,11 @@ h3 {
 
 .job-stack span {
   padding: 4px 12px;
-
   font-size: 13px;
   color: var(--ink);
-
   background: var(--surface);
   border: 1px solid var(--line);
-
   border-radius: 100px;
-
   transition:
     background-color 0.25s ease,
     border-color 0.25s ease,

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
@@ -21,7 +21,6 @@ const PHRASES = [
 const OFFSETS = [0, WORDS[0].length] as const;
 
 export default function ProfileHeader() {
-  const titleRef = useRef<HTMLHeadingElement | null>(null);
   const [typed, setTyped] = useState<string>(PHRASES[0]);
 
   useEffect(() => {
@@ -37,12 +36,7 @@ export default function ProfileHeader() {
     const tick = () => {
       const phrase = PHRASES[phraseIndex];
 
-      if (deleting) {
-        charIndex -= 1;
-      } else {
-        charIndex += 1;
-      }
-
+      charIndex += deleting ? -1 : 1;
       setTyped(phrase.slice(0, charIndex));
 
       let delay = deleting ? 35 : 70;
@@ -59,42 +53,32 @@ export default function ProfileHeader() {
       timeoutId = setTimeout(tick, delay);
     };
 
-    setTyped("");
-    timeoutId = setTimeout(tick, 900);
+    timeoutId = setTimeout(() => {
+      setTyped("");
+      tick();
+    }, 900);
 
-    return () => {
-      clearTimeout(timeoutId);
-    };
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
     <div className="profile">
       <div className="wrapper profile-grid">
         <div>
-          <h1
-            ref={titleRef}
-            aria-label="Edgar Petrosyan, Senior Frontend Developer"
-          >
+          <h1 aria-label="Edgar Petrosyan, Senior Frontend Engineer">
             {WORDS.map((word, wordIndex) => (
-              <span
-                className="word"
-                aria-hidden="true"
-                key={word}
-              >
+              <span className="word" aria-hidden="true" key={word}>
                 {[...word].map((char, charIndex) => (
                   <span
                     className="ch"
                     key={`${word}-${charIndex}`}
                     style={
-                      {
-                        "--i": OFFSETS[wordIndex] + charIndex,
-                      } as React.CSSProperties
+                      { "--i": OFFSETS[wordIndex] + charIndex } as CSSProperties
                     }
                   >
                     {char}
                   </span>
                 ))}
-
                 {wordIndex === 0 && "\u00A0"}
               </span>
             ))}
@@ -104,27 +88,27 @@ export default function ProfileHeader() {
             </span>
           </h1>
 
-          <p className="typed" aria-live="polite">
-            {typed}
+          <p className="typed" aria-hidden="true">
+            {typed || "\u00A0"}
           </p>
 
           <p className="lede">
             Senior Frontend Engineer with <strong>8+ years</strong> of
             hands-on experience architecting scalable, high-quality web
-            applications using <br />
-            <strong>React, Next.js and Angular</strong>, and TypeScript.
+            applications using{" "}
+            <strong>React, Next.js, Angular, and TypeScript</strong>.
             Specialized in building complex admin panels, dashboards,
             real-time features, and performance-critical user experiences.
             Proven ability to own features end-to-end, modernize legacy
-            codebases, implement clean & maintainable architectures, and
-            collaborate effectively with product, design, and backend teams to
-            deliver intuitive, production-grade solutions in fast-paced
+            codebases, implement clean and maintainable architectures, and
+            collaborate effectively with product, design, and backend teams
+            to deliver intuitive, production-grade solutions in fast-paced
             environments.
           </p>
 
           <div className="cta">
-            <a className="btn main" href="#experience">
-              See my experience
+            <a className="btn main" href="#contact">
+             Get in touch
             </a>
             <a
               className="btn"
@@ -173,7 +157,6 @@ export default function ProfileHeader() {
               <span>GitHub</span>
             </a>
           </div>
-
         </div>
 
         <div className="visual">
@@ -201,11 +184,12 @@ export default function ProfileHeader() {
           </div>
         </div>
       </div>
-          <div className="stack-section profile-section">
-              <div className="wrapper">
-                <Stats />
-            </div>
-          </div>
+
+      <div className="stack-section profile-section">
+        <div className="wrapper">
+          <Stats />
+        </div>
+      </div>
     </div>
   );
 }

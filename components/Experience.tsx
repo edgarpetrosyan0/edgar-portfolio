@@ -1,24 +1,27 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 export default function ExperienceItem({ children }: { children: ReactNode }) {
-  
   const ref = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    if (!("IntersectionObserver" in window)) {
-      el.classList.add("show");
+    if (
+      !("IntersectionObserver" in window) ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      setVisible(true);
       return;
     }
 
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add("show");
+          setVisible(true);
           io.disconnect();
         }
       },
@@ -30,7 +33,7 @@ export default function ExperienceItem({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <article ref={ref} className="job">
+    <article ref={ref} className={visible ? "job show" : "job"}>
       {children}
     </article>
   );
