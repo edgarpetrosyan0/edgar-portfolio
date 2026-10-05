@@ -1,0 +1,87 @@
+// Theme — Dark
+
+$dark-bg: #08090b;
+$dark-surface: #111318;
+$dark-surface2: #191c22;
+$dark-line: #2b2f38;
+
+$dark-ink: #f8f7f4;
+$dark-muted: #aaa7a0;
+
+$dark-red: #ff4b2b;
+$dark-crimson: #ff3d00;
+$dark-wine: #c62828;
+
+$dark-soft-ink: #d6d3cc;
+$dark-dim: #7d7b75;
+
+$dark-on-accent: #ffffff;
+$dark-glass: rgba(17, 19, 24, 0.72);
+$dark-frame-border: rgba(255, 255, 255, 0.14);
+
+
+// Theme — Light
+
+$light-bg: #faf9f7;
+$light-surface: #ffffff;
+$light-surface2: #f3f1ed;
+$light-line: #e5e1da;
+
+$light-ink: #171614;
+$light-muted: #6f6b64;
+
+$light-red: #ff4b2b;
+$light-crimson: #e53935;
+$light-wine: #b42318;
+
+$light-soft-ink: #3f3c37;
+$light-dim: #918d86;
+
+$light-on-accent: #ffffff;
+$light-glass: rgba(255, 255, 255, 0.78);
+$light-frame-border: rgba(23, 22, 20, 0.10);
+
+
+// Shared
+
+$grad: linear-gradient(
+  90deg,
+  #ffb347 0%,
+  #ff5a1f 50%,
+  #e53935 100%
+);
+
+$bp-sm: 640px;
+$bp-md: 760px;
+$bp-lg: 860px;
+
+$main-font: "Hypebuzz", sans-serif;
+
+
+// Background waves
+$waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900' preserveAspectRatio='none'%3E%3Cpath d='M-100 180 C220 20 480 380 760 190 C1030 10 1240 300 1540 100' fill='none' stroke='%23ffffff0b' stroke-width='1.5'/%3E%3Cpath d='M-100 300 C220 140 480 500 760 310 C1030 130 1240 420 1540 220' fill='none' stroke='%23ff4d5e0b' stroke-width='1.5'/%3E%3Cpath d='M-100 420 C220 260 480 620 760 430 C1030 250 1240 540 1540 340' fill='none' stroke='%23a3154f0a' stroke-width='1.5'/%3E%3Cpath d='M-100 540 C220 380 480 740 760 550 C1030 370 1240 660 1540 460' fill='none' stroke='%23ffffff07' stroke-width='1.5'/%3E%3C/svg%3E");
+
+//indigo
+// var(--bg): #0b0a14;         
+// var(--surface): #12101c;     
+// var(--surface)2: #1a1729;    
+// var(--line): #2c2740;       
+// var(--muted): #aa9ba2;
+// var(--ink): #f7f0f2;
+// var(--red): #2196f3;
+// var(--crimson): #1565c0;
+// var(--wine): #2196f3;
+// var(--soft-ink): #d3c6cb;
+// var(--dim): #7f7077;
+
+// $indigo: #7986cb;      // Material Indigo 300 (bright accent)
+// $indigo-mid: #5c6bc0;  // Material Indigo 400
+// $indigo-deep: #303f9f; // Material Indigo 700
+
+// $grad: linear-gradient(90deg, #9fa8da 0%, $indigo-mid 55%, $indigo-deep 100%);
+
+// $bp-sm: 640px;
+// $bp-md: 760px;
+// $bp-lg: 860px;
+
+// $waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900' preserveAspectRatio='none'%3E%3Cpath d='M-100 180 C220 20 480 380 760 190 C1030 10 1240 300 1540 100' fill='none' stroke='%23ffffff0b' stroke-width='1.5'/%3E%3Cpath d='M-100 300 C220 140 480 500 760 310 C1030 130 1240 420 1540 220' fill='none' stroke='%23ff4d5e0b' stroke-width='1.5'/%3E%3Cpath d='M-100 420 C220 260 480 620 760 430 C1030 250 1240 540 1540 340' fill='none' stroke='%23a3154f0a' stroke-width='1.5'/%3E%3Cpath d='M-100 540 C220 380 480 740 760 550 C1030 370 1240 660 1540 460' fill='none' stroke='%23ffffff07' stroke-width='1.5'/%3E%3C/svg%3E");

@@ -128,7 +128,7 @@ export default function ProfileHeader() {
             </a>
             <a
               className="btn"
-              href="/Edgar_Petrosyan_CV.pdf"
+              href="/documents/Edgar_Petrosyan_CV.pdf"
               download
             >
               Download CV
@@ -179,7 +179,7 @@ export default function ProfileHeader() {
         <div className="visual">
           <div className="frame">
             <Image
-              src="/photo.jpg"
+              src="/images/photo.jpg"
               alt="Portrait of Edgar Petrosyan"
               width={800}
               height={1000}

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.scss";
 import ZoomBlocker from "@/components/ZoomBlocker";
+import ThemeProvider from "@/components/providers/ThemeProvider";
 
 const display = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -59,10 +60,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html
+     lang="en"
+  className={`${display.variable} ${body.variable}`}
+  suppressHydrationWarning
+    >
       <body>
-        <ZoomBlocker />
-        <div>{children}</div>
+        <ThemeProvider>
+          <ZoomBlocker />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

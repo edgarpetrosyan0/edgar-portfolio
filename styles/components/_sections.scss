@@ -1,5 +1,5 @@
-@use "variables" as *;
-@use "mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 section {
   padding: clamp(3.5rem, 8vw, 6rem) 0;
@@ -18,7 +18,7 @@ h2 {
 
   p {
     max-width: 62ch;
-    color: $soft-ink;
+    color: var(--soft-ink);
   }
 
   @include max($bp-md) {
@@ -33,12 +33,10 @@ h2 {
   align-content: start;
 }
 
-
-
 .tl {
   position: relative;
   padding-left: 1.8rem;
-  border-left: 2px solid $line;
+  border-left: 2px solid var(--line);
 }
 
 .job {
@@ -46,6 +44,7 @@ h2 {
   padding-bottom: 2.6rem;
   opacity: 0;
   transform: translateX(-14px);
+
   @include transition(opacity 0.6s, transform 0.6s);
 
   &.show {
@@ -59,9 +58,13 @@ h2 {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: $bg;
-    border: 3px solid $red;
-    box-shadow: 0 0 14px rgba($red, 0.6);
+
+    background: var(--bg);
+    border: 3px solid var(--red);
+
+    box-shadow:
+      0 0 14px color-mix(in srgb, var(--red) 60%, transparent);
+
     left: calc(-1.8rem - 9px);
   }
 
@@ -73,14 +76,14 @@ h2 {
   ul {
     padding-left: 1.1rem;
     max-width: 70ch;
-    color: $soft-ink;
+    color: var(--soft-ink);
   }
 
   li {
     margin-bottom: 0.4rem;
 
     &::marker {
-      color: $muted;
+      color: var(--muted);
     }
   }
 
@@ -96,7 +99,7 @@ h2 {
 }
 
 .meta {
-  color: $muted;
+  color: var(--muted);
   font-weight: 600;
   font-size: 0.95rem;
   margin: 0.2rem 0 0.7rem;
@@ -110,11 +113,14 @@ h2 {
 
 .group {
   @include card;
+
   padding: 1.4rem;
+
   transition:
     transform 0.2s,
     border-color 0.2s,
     box-shadow 0.2s;
+
   cursor: pointer;
 
   h3 {
@@ -123,7 +129,7 @@ h2 {
   }
 
   &:hover {
-    border-color: $muted;
+    border-color: var(--muted);
     transform: translateY(-3px);
   }
 }
@@ -136,9 +142,12 @@ h2 {
   span {
     padding: 0.25rem 0.7rem;
     border-radius: 10px;
-    background: $surface2;
-    border: 1px solid $line;
+
+    background: var(--surface2);
+    border: 1px solid var(--line);
+
     font-size: 0.9rem;
+
     @include transition(background 0.2s, border-color 0.2s);
   }
 }
@@ -154,7 +163,7 @@ h2 {
   }
 
   p {
-    color: $muted;
+    color: var(--muted);
   }
 
   @include max($bp-md) {
@@ -169,21 +178,30 @@ h2 {
 .contact-card {
   position: relative;
   overflow: hidden;
+
   padding: clamp(2rem, 5vw, 3.5rem);
-  border: 1px solid $line;
+
+  border: 1px solid var(--line);
   border-radius: 20px;
+
   background:
-    radial-gradient(circle at 90% 10%, rgba($crimson, 0.12), transparent 32%),
-    radial-gradient(circle at 10% 100%, rgba($wine, 0.1), transparent 32%),
-    $surface;
+    radial-gradient(
+      circle at 90% 10%,
+      color-mix(in srgb, var(--crimson) 12%, transparent),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 10% 100%,
+      color-mix(in srgb, var(--wine) 10%, transparent),
+      transparent 32%
+    ),
+    var(--surface);
 }
 
 .contact-content {
   position: relative;
   z-index: 1;
-}
 
-.contact-content {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: clamp(3rem, 8vw, 7rem);
@@ -194,7 +212,9 @@ h2 {
   h2 {
     max-width: 750px;
     margin: 0;
-    color: $ink;
+
+    color: var(--ink);
+
     font-size: clamp(3rem, 7vw, 6rem);
     font-weight: 800;
     line-height: 0.98;
@@ -202,8 +222,10 @@ h2 {
 
     span {
       display: block;
-      background: linear-gradient(90deg, #ffb347 0%, #ff5a1f 50%, #e53935 100%);
-      color: #0000;
+
+      background: var(--grad);
+      color: transparent;
+
       -webkit-background-clip: text;
       background-clip: text;
     }
@@ -216,7 +238,9 @@ h2 {
 
 .contact-description {
   margin: 0 0 2rem;
-  color: $soft-ink;
+
+  color: var(--soft-ink);
+
   font-size: 0.95rem;
   line-height: 1.8;
 }
@@ -226,6 +250,7 @@ h2 {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+
   gap: 0.75rem;
   margin-top: 1.5rem;
 
@@ -233,6 +258,7 @@ h2 {
     display: inline-flex;
     align-items: center;
     gap: 5px;
+
     font-size: 14px;
     line-height: 1;
     text-decoration: none;
@@ -249,9 +275,10 @@ h2 {
     }
 
     &:hover {
-      color: $crimson;
+      color: var(--crimson);
     }
   }
+
   .btn {
     flex-shrink: 0;
     white-space: nowrap;
@@ -294,9 +321,10 @@ h2 {
   }
 
   .contact-links {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
     display: grid;
-    width: 100px;
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+    width: 100%;
   }
 }

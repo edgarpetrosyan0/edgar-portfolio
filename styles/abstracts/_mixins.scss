@@ -21,7 +21,7 @@
 }
 
 @mixin card($radius: 18px) {
-  background: $surface;
-  border: 1px solid $line;
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: $radius;
 }

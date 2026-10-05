@@ -1,9 +1,8 @@
-// Entry file: only imports. Partials live in /styles
-@use "../styles/base";
-@use "../styles/nav";
-@use "../styles/profile";
-@use "../styles/sections";
-@use "../styles/education";
-@use "../styles/contact";
-@use "../styles/admin";
-@use "../styles/stats";
+@use "../styles/base/base";
+@use "../styles/components/admin";
+@use "../styles/components/contact";
+@use "../styles/components/education";
+@use "../styles/components/nav";
+@use "../styles/components/profile";
+@use "../styles/components/sections";
+@use "../styles/components/stats";

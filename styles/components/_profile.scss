@@ -1,5 +1,5 @@
-@use "variables" as *;
-@use "mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .profile {
   position: relative;
@@ -11,15 +11,16 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
+
     background:
       radial-gradient(
         600px 400px at 0% 10%,
-        rgba($wine, 0.22),
+        color-mix(in srgb, var(--wine) 14%, transparent),
         transparent 70%
       ),
       radial-gradient(
         500px 400px at 100% 90%,
-        rgba($crimson, 0.14),
+        color-mix(in srgb, var(--crimson) 10%, transparent),
         transparent 70%
       );
   }
@@ -27,6 +28,7 @@
 
 .profile-grid {
   position: relative;
+
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   align-items: center;
@@ -40,19 +42,24 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  border: 1px solid rgba($muted, 0.4);
-  background: rgba($red, 0.08);
-  color: #ff8a95;
+
+  border: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+  background: color-mix(in srgb, var(--red) 7%, transparent);
+  color: var(--crimson);
+
   padding: 0.35rem 0.9rem;
   border-radius: 99px;
+
   font-size: 0.88rem;
   font-weight: 600;
 
   i {
     width: 0.5rem;
     height: 0.5rem;
+
     border-radius: 50%;
-    background: $red;
+    background: var(--red);
+
     animation: pulse 2s infinite;
   }
 }
@@ -60,21 +67,25 @@
 @keyframes pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba($red, 0.5);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--red) 50%, transparent);
   }
 
   50% {
-    box-shadow: 0 0 0 0.45rem rgba($red, 0);
+    box-shadow: 0 0 0 0.45rem transparent;
   }
 }
 
 h1 {
+  margin: 1.4rem 0 1.2rem;
+
   font-size: clamp(2.7rem, 7.2vw, 2.9rem);
   font-weight: 800;
-  letter-spacing: -0.035em;
-  margin: 1.4rem 0 1.2rem;
-  cursor: default;
   line-height: 1.28;
+
+  letter-spacing: -0.035em;
+  color: var(--ink);
+
+  cursor: default;
 
   .word {
     display: inline-block;
@@ -84,9 +95,12 @@ h1 {
 
   .ch {
     display: inline-block;
+
     font-variation-settings: "wght" 700;
+
     opacity: 0;
     transform: translateY(40%);
+
     animation: in 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     animation-delay: calc(var(--i) * 40ms + 150ms);
   }
@@ -112,21 +126,30 @@ h1 {
 }
 
 .typed {
+  min-height: 1.5em;
+  margin-bottom: 1.2rem;
+
   font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(1.1rem, 2.4vw, 1.45rem);
   line-height: 1.4;
-  min-height: 1.5em;
-  margin-bottom: 1.2rem;
+
+  color: var(--ink);
 
   &::after {
     content: "";
+
     display: inline-block;
+
     width: 2px;
     height: 1.1em;
+
     margin-left: 3px;
-    background: $muted;
+
+    background: var(--muted);
+
     vertical-align: -0.15em;
+
     animation: blink 1s steps(1) infinite;
   }
 }
@@ -139,11 +162,12 @@ h1 {
 
 .lede {
   max-width: 56ch;
-  color: $muted;
+
+  color: var(--muted);
   font-size: 1.1rem;
 
   strong {
-    color: $ink;
+    color: var(--ink);
     font-weight: 600;
   }
 }
@@ -152,6 +176,7 @@ h1 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
   gap: 0.7rem;
   margin-top: 3rem;
 
@@ -162,27 +187,41 @@ h1 {
 
 .btn {
   display: inline-block;
+
   padding: 0.8rem 1.4rem;
+
+  border: 1px solid var(--line);
   border-radius: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  border: 1px solid $line;
-  background: $surface;
+
+  background: var(--surface);
+  color: var(--ink);
+
   font-size: 14px;
-  @include transition(transform 0.2s, border-color 0.2s, box-shadow 0.2s);
+  font-weight: 600;
+
+  text-decoration: none;
+
+  @include transition(
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background-color 0.25s,
+    color 0.25s
+  );
 
   &.main {
-    background: $grad;
-    color: #fff;
+    background: var(--grad);
+    color: var(--on-accent);
 
     &:hover {
-      box-shadow: 0 10px 30px -8px rgba($crimson, 0.7);
+      box-shadow: 0 10px 30px -8px
+        color-mix(in srgb, var(--crimson) 50%, transparent);
     }
   }
 
   &:hover {
     transform: translateY(-3px);
-    border-color: $red;
+    border-color: var(--red);
   }
 }
 
@@ -190,31 +229,35 @@ h1 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
   gap: 20px;
   margin-top: 2rem;
-  color: $dim;
+
+  color: var(--dim);
 
   .icon-wrapper {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    color: $dim;
+
+    color: var(--dim);
+
     font-size: 14px;
     line-height: 1;
     text-decoration: none;
     white-space: nowrap;
 
     &:hover {
-      color: $crimson;
+      color: var(--crimson);
     }
   }
 }
 
 .visual {
   position: relative;
+  width: min(100%, 340px);
   margin: 0;
   justify-self: center;
-  width: min(100%, 340px);
   animation: fade 1s 0.4s both;
 
   &::before,
@@ -223,20 +266,21 @@ h1 {
     position: absolute;
     border-radius: 36px;
     filter: blur(38px);
-    opacity: 0.75;
+    pointer-events: none;
     animation: float 4s ease-in-out infinite;
   }
 
   &::before {
     inset: -6% -26% -6% 10%;
-    background: linear-gradient(135deg, $crimson, #7a1038);
+    background: linear-gradient(135deg, #ffb347 0%, #ff5a1f 50%, #e53935 100%);
+    opacity: 0.55;
     transform: rotate(14deg);
   }
 
   &::after {
     inset: 12% 10% -14% -24%;
-    background: linear-gradient(135deg, #ff7a45, $wine);
-    opacity: 0.45;
+    background: linear-gradient(135deg, #ff5a1f 0%, #e53935 60%, #ffb347 100%);
+    opacity: 0.22;
     transform: rotate(-12deg);
     animation-delay: -4s;
   }
@@ -248,14 +292,16 @@ h1 {
 
     &::before {
       inset: -2% -10% -2% 6%;
+
       filter: blur(18px);
       opacity: 0.3;
     }
 
     &::after {
       inset: 8% 6% -8% -10%;
+
       filter: blur(18px);
-      opacity: 0.18;
+      opacity: 0.16;
     }
   }
 }
@@ -269,86 +315,108 @@ h1 {
 .frame {
   position: relative;
   z-index: 1;
-  aspect-ratio: 6/8;
-  border-radius: 24px;
+  aspect-ratio: 6 / 8;
   overflow: hidden;
-  border: 1px solid rgba(#fff, 0.14);
-  background: $surface;
+  border: 1px solid var(--frame-border);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: 0 20px 60px color-mix(in srgb, var(--ink) 8%, transparent);
+
   pointer-events: none;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
 
   img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
   }
 }
 
 .badge {
-  z-index: 2;
-  background: #11131869;
-  border-radius: 26px;
-  padding: 0.75rem 3.1rem;
   position: relative;
-  bottom: 75px;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding: 0.75rem 3.1rem;
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  border-radius: 26px;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  bottom: 75px;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
 
   .badge-head {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: var(--red);
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: $red;
 
     i {
       width: 0.45rem;
       height: 0.45rem;
       border-radius: 50%;
-      background: $red;
+      background: var(--red);
       animation: pulse 2s infinite;
     }
   }
 
   .badge-tags {
     display: flex;
+
     gap: 0.5rem;
     margin: 0.5rem 0 0;
     padding: 0;
+
     list-style: none;
+
+    color: var(--ink);
+
     font-size: 0.9rem;
     font-weight: 700;
-    color: $ink;
 
     li + li::before {
       content: "/";
+
       margin-right: 0.5rem;
-      color: $muted;
+
+      color: var(--muted);
+
       font-weight: 400;
     }
   }
 
   @include max($bp-lg) {
-    left: 8px;
-  }
-
-  @include max($bp-lg) {
     position: absolute;
+
     left: 50%;
     bottom: 12px;
-    transform: translateX(-50%);
+
     width: max-content;
     max-width: calc(100% - 10px);
+
     padding: 0.6rem 1.1rem;
+
     border-radius: 20px;
+
     align-items: baseline;
     text-align: center;
 
+    transform: translateX(-50%);
+
     .badge-head {
       justify-content: center;
+
       font-size: 0.62rem;
       letter-spacing: 0.1em;
     }
@@ -356,8 +424,10 @@ h1 {
     .badge-tags {
       flex-wrap: wrap;
       justify-content: center;
+
       gap: 0.3rem 0.4rem;
       margin-top: 0.35rem;
+
       font-size: 0.8rem;
 
       li + li::before {

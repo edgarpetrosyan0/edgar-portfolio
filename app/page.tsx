@@ -174,7 +174,7 @@ export default function Home() {
                     <span>GitHub</span>
                   </a>
 
-                  <a href="/Edgar_Petrosyan_CV.pdf" className="icon-wrapper" download>
+                  <a href="/documents/Edgar_Petrosyan_CV.pdf" className="icon-wrapper" download>
                     <span className="download-cv">
                       <DownloadOutlined />
                       Download CV</span>

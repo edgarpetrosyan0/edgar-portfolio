@@ -1,18 +1,18 @@
-@use "variables" as *;
-@use "mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .admin-login {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $bg;
+  background: var(--bg);
   font-family: system-ui, -apple-system, sans-serif;
 }
 
 .admin-login__card {
-  background: $surface;
-  border: 1px solid $line;
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 20px;
   padding: 44px 40px;
   width: 100%;
@@ -43,12 +43,12 @@
     margin: 0 0 8px;
     font-size: 24px;
     font-weight: 600;
-    color: $ink;
+    color: var(--ink);
   }
 
   p {
     margin: 0;
-    color: $muted;
+    color: var(--muted);
     font-size: 14px;
   }
 }
@@ -60,7 +60,7 @@
     display: block;
     font-size: 12px;
     font-weight: 500;
-    color: $muted;
+    color: var(--muted);
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.6px;
@@ -70,21 +70,21 @@
   textarea {
     width: 100%;
     padding: 14px 16px;
-    background: $surface2;
-    border: 1.5px solid $line;
+    background: var(--surface)2;
+    border: 1.5px solid var(--line);
     border-radius: 12px;
-    color: $ink;
+    color: var(--ink);
     font-size: 15px;
     font-family: inherit;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
 
     &::placeholder {
-      color: $dim;
+      color: var(--dim);
     }
 
     &:focus {
-      border-color: $crimson;
+      border-color: var(--crimson);
       box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15);
     }
   }
@@ -126,28 +126,28 @@
 
   &--outline {
     background: transparent;
-    color: $red;
+    color: var(--red);
     border: 1.5px solid rgba(255, 77, 94, 0.4);
     padding: 9px 18px;
     font-size: 13px;
 
     &:hover {
       background: rgba(255, 77, 94, 0.1);
-      border-color: $red;
+      border-color: var(--red);
     }
   }
 
   &--danger {
     background: none;
     border: none;
-    color: $dim;
+    color: var(--dim);
     font-size: 13px;
     font-weight: 500;
     padding: 5px 10px;
     border-radius: 8px;
 
     &:hover {
-      color: $red;
+      color: var(--red);
       background: rgba(255, 77, 94, 0.1);
     }
   }
@@ -156,14 +156,14 @@
 // ========== DASHBOARD ==========
 .admin {
   min-height: 100vh;
-  background: $bg;
+  background: var(--bg);
   font-family: system-ui, -apple-system, sans-serif;
-  color: $ink;
+  color: var(--ink);
 }
 
 .admin__bar {
-  background: $surface;
-  border-bottom: 1px solid $line;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
   padding: 0 28px;
   height: 68px;
   display: flex;
@@ -197,7 +197,7 @@
     margin: 0;
     font-size: 17px;
     font-weight: 600;
-    color: $ink;
+    color: var(--ink);
   }
 }
 
@@ -209,7 +209,7 @@
 
 .admin__toast {
   background: rgba(225, 29, 72, 0.15);
-  color: $red;
+  color: var(--red);
   padding: 7px 16px;
   border-radius: 20px;
   font-size: 13px;
@@ -218,10 +218,10 @@
 }
 
 .admin__tabs {
-  background: $surface;
+  background: var(--surface);
   display: flex;
   padding: 0 28px;
-  border-bottom: 1px solid $line;
+  border-bottom: 1px solid var(--line);
 }
 
 .admin__tab {
@@ -230,17 +230,17 @@
   padding: 16px 22px;
   font-size: 14px;
   font-weight: 500;
-  color: $muted;
+  color: var(--muted);
   cursor: pointer;
   position: relative;
   transition: color 0.2s;
 
   &:hover {
-    color: $soft-ink;
+    color:  var(--soft-ink);
   }
 
   &.active {
-    color: $ink;
+    color: var(--ink);
 
     &::after {
       content: "";

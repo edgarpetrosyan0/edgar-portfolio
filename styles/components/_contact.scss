@@ -1,5 +1,5 @@
-@use "variables" as *;
-@use "mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 // Contact
 .contact {
@@ -16,7 +16,7 @@
   }
 
   p {
-    color: $muted;
+    color: var(--muted);
     margin: 0 auto 30px;
     text-align: center;
   }
@@ -32,20 +32,20 @@
     display: block;
     padding: 1rem 1.2rem;
     border-radius: 14px;
-    border: 1px solid $line;
-    background: rgba($bg, 0.6);
+    border: 1px solid var(--line);
+    background: rgba(var(--bg), 0.6);
     text-decoration: none;
     @include transition(border-color 0.2s, transform 0.2s);
 
     small {
       display: block;
-      color: $muted;
+      color: var(--muted);
       font-size: 0.85rem;
       font-weight: 600;
     }
 
     &:hover {
-      border-color: $muted;
+      border-color: var(--muted);
       transform: translateY(-3px);
     }
   }
@@ -53,7 +53,7 @@
 
 footer {
   padding: 2rem 0 3rem;
-  color: $dim;
+  color: var(--dim);
   font-size: 0.92rem;
   text-align: center;
 }
