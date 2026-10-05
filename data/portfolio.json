@@ -56,7 +56,7 @@
   "jobs": [
     {
       "title": "Frontend Engineer · NDA / Freelance",
-      "period": "September 2026 - Present",
+      "period": "Sep 2026 – Present",
       "points": [
         "Developed and integrated responsive web interfaces using modern frontend technologies and established project architecture.",
         "Designed and integrated secure user flows, including authentication state management and post-authentication navigation.",
@@ -67,7 +67,7 @@
     },
     {
       "title": "Frontend Engineer · Ideascoll",
-      "period": "April 2025 – Present",
+      "period": "Apr 2025 – Present",
       "points": [
         "Built polished, responsive admin panels and landing pages with React 19, Next.js 15+, TypeScript, Tailwind CSS, Ant Design and Shadcn UI.",
         "Designed predictable, scalable state management with Redux Toolkit, improving data consistency and developer experience.",
@@ -86,7 +86,7 @@
     },
     {
       "title": "Software Developer (Consultant) · Freelance",
-      "period": "February 2024 – April 2025",
+      "period": "Feb 2024 – Apr 2025",
       "points": [
         "Led end-to-end development of several web apps for diverse clients using Angular 18+, React / Next.js, RxJS and Redux Toolkit.",
         "Owned architecture, type-safe UI and API integrations.",
@@ -97,7 +97,7 @@
     },
     {
       "title": "Software Developer · Seven Smarts",
-      "period": "December 2022 – November 2023",
+      "period": "Dec 2022 – Nov 2023",
       "points": [
         "Built and improved the UniSight admin panel and landing page with Angular 16, TypeScript and SCSS: fully responsive and accessible.",
         "Designed advanced user management features and optimized complex data workflows for dashboards.",
@@ -107,7 +107,7 @@
     },
     {
       "title": "Frontend Engineer · RoboDel",
-      "period": "October 2022 – October 2023",
+      "period": "Oct 2022 – Oct 2023",
       "points": [
         "Developed core client flows (landing, ordering, registration) for a robot-powered food delivery platform with Angular 16, RxJS, TypeScript and Tailwind CSS.",
         "Built real-time interactive components with solid form handling, validation and reactive data streams.",
@@ -124,7 +124,7 @@
     },
     {
       "title": "Frontend Developer · MerSoft LLC",
-      "period": "September 2017 – October 2022",
+      "period": "Sep 2017 – Oct 2022",
       "points": [
         "Owned several production systems, including new modules for the Pigeon Delivery System dashboard and the full Bonee QR Menu product (admin panel, landing page, client interfaces).",
         "Designed reusable component architectures in Angular 2–13 for faster feature delivery.",
