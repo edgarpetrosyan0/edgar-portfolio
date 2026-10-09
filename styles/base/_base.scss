@@ -83,7 +83,6 @@ body {
   position: relative;
   background: var(--bg);
   color: var(--ink);
-
   transition:
     background-color 0.35s ease,
     color 0.35s ease;
@@ -106,11 +105,8 @@ body {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-
-    opacity: 0.9;
-
+    opacity: 0.5;
     -webkit-mask-image: linear-gradient(#000 0%, #000 35%, transparent 80%);
-
     mask-image: linear-gradient(#000 0%, #000 35%, transparent 80%);
   }
 }
@@ -142,24 +138,4 @@ h3 {
 
 .grad {
   @include grad-text;
-}
-
-.job-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-}
-
-.job-stack span {
-  padding: 4px 12px;
-  font-size: 13px;
-  color: var(--ink);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 100px;
-  transition:
-    background-color 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease;
 }

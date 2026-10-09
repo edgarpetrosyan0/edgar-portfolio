@@ -21,18 +21,7 @@
 }
 
 @mixin card($radius: 18px) {
-  // background: var(--surface);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: $radius;
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(249, 115, 22, 0.07),
-      transparent 32%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.035),
-      rgba(255, 255, 255, 0.018)
-    );
 }

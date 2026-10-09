@@ -3,7 +3,7 @@
 
 .profile {
   --nav-h: 90px;
-  position: relative;
+  //position: relative;
   overflow: hidden;
   padding: calc(var(--nav-h) + 16px) 0 0;
 
@@ -16,7 +16,6 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-
     background:
       radial-gradient(
         600px 400px at 0% 10%,
