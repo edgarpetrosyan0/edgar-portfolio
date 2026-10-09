@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.scss";
 import ZoomBlocker from "@/components/ZoomBlocker";
 import ThemeProvider from "@/components/providers/ThemeProvider";
+import Navbar from "@/components/Navbar";
 
 const display = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -61,13 +62,14 @@ export default function RootLayout({
 }) {
   return (
     <html
-     lang="en"
-  className={`${display.variable} ${body.variable}`}
-  suppressHydrationWarning
+      lang="en"
+      className={`${display.variable} ${body.variable}`}
+      suppressHydrationWarning
     >
       <body>
         <ThemeProvider>
           <ZoomBlocker />
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

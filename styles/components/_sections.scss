@@ -144,7 +144,7 @@ h2 {
   @media (hover: hover) {
     &:hover {
       transform: translateY(-3px);
-      border-color: color-mix(in srgb, var(--red) 45%, var(--line));
+      border-color: var(--crimson);
       box-shadow: 0 16px 40px -18px
         color-mix(in srgb, var(--red) 35%, transparent);
     }
@@ -176,9 +176,7 @@ h2 {
 
 .group {
   @include card;
-
   padding: 1.4rem;
-
   transition:
     transform 0.2s,
     border-color 0.2s,
@@ -192,7 +190,9 @@ h2 {
   }
 
   &:hover {
-    border-color: var(--muted);
+     border-color: var(--crimson);
+        box-shadow: 0 16px 40px -18px
+        color-mix(in srgb, var(--red) 35%, transparent);
     transform: translateY(-3px);
   }
 }
