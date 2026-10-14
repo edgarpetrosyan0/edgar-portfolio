@@ -36,8 +36,15 @@
   --on-accent: #{$dark-on-accent};
   --glass: #{$dark-glass};
   --frame-border: #{$dark-frame-border};
-
   --grad: #{$grad};
+ 
+  --card-bg: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.015)
+  );
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: none;
 }
 
 [data-theme="light"] {
@@ -56,6 +63,9 @@
   --glass: #{$light-glass};
   --frame-border: #{$light-frame-border};
   --grad: #{$grad};
+   --card-bg: linear-gradient(160deg, var(--surface), var(--surface2));
+  --card-border: var(--line);
+  --card-shadow: 0 1px 2px rgba(20, 10, 5, 0.05), 0 10px 28px -14px rgba(20, 10, 5, 0.18);
 }
 
 * {
@@ -139,3 +149,5 @@ h3 {
 .grad {
   @include grad-text;
 }
+
+
