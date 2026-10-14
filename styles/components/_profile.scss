@@ -339,8 +339,6 @@
   border: 1px solid var(--frame-border);
   border-radius: 24px;
   background: var(--surface);
-  box-shadow: 0 20px 60px color-mix(in srgb, var(--ink) 8%, transparent);
-
   pointer-events: none;
   transition:
     background-color 0.25s ease,
@@ -375,7 +373,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--red);
+    color: rgb(255, 90, 31);
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -386,7 +384,7 @@
       width: 0.45rem;
       height: 0.45rem;
       border-radius: 50%;
-      background: var(--red);
+      background: rgb(255, 90, 31);
       animation: pulse 2s infinite;
     }
   }
