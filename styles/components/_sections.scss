@@ -97,7 +97,6 @@ h2 {
 
 .exp-card {
   @include card;
-
   position: relative;
   overflow: hidden;
   padding: 40px;
@@ -141,14 +140,10 @@ h2 {
     }
   }
 
-  @media (hover: hover) {
     &:hover {
       transform: translateY(-3px);
       border-color: var(--crimson);
-      box-shadow: 0 16px 40px -18px
-        color-mix(in srgb, var(--red) 35%, transparent);
     }
-  }
 }
 
 .exp-stack {
@@ -168,10 +163,114 @@ h2 {
   }
 }
 
-.skills {
+#skills {
+  --sk-amber: #ffb347;
+  --sk-orange: #ff5a1f;
+  --sk-red: #e53935;
+  --sk-grad: linear-gradient(
+    135deg,
+    var(--sk-amber),
+    var(--sk-orange) 55%,
+    var(--sk-red)
+  );
+}
+
+.sk-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 1.1rem;
+  margin-top: 2.5rem;
+}
+
+.sk-card {
+  @include card;
+  position: relative;
+  padding: 1.4rem 1.4rem 1.5rem;
+  overflow: hidden;
+}
+
+.sk-card:hover {
+  transform: translateY(-4px);
+    border-color: var(--crimson);
+}
+
+
+.sk-card:hover::before {
+  opacity: 1;
+}
+.sk-card:hover::after {
+  opacity: 1;
+  left: 0;
+  right: 0;
+}
+
+.sk-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+
+.sk-head h3 {
+  margin: 0;
+  flex: 1;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.sk-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  color: #fff;
+  background: var(--sk-grad);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.sk-card:hover .sk-icon {
+  transform: rotate(-6deg) scale(1.08);
+}
+
+.sk-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.sk-tag {
+  position: relative;
+  padding: 0.32rem 0.75rem;
+  font-size: 0.82rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition:
+    transform 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+.sk-tag:hover {
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sk-card,
+  .sk-icon,
+  .sk-tag {
+    transition: none;
+  }
+  .sk-card:hover,
+  .sk-tag:hover,
+  .sk-card:hover .sk-icon {
+    transform: none;
+  }
 }
 
 .group {
@@ -190,9 +289,9 @@ h2 {
   }
 
   &:hover {
-     border-color: var(--crimson);
-        box-shadow: 0 16px 40px -18px
-        color-mix(in srgb, var(--red) 35%, transparent);
+    border-color: var(--crimson);
+    box-shadow: 0 16px 40px -18px
+      color-mix(in srgb, var(--red) 35%, transparent);
     transform: translateY(-3px);
   }
 }
