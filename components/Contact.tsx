@@ -10,6 +10,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section">
       <div className="wrapper contact-wrap">
+         <h2>Get in touch</h2>
         <div className="contact-card">
           <div className="contact-content">
             <div className="contact-heading">

@@ -85,7 +85,7 @@ export default function Navbar() {
                 <a href="#skills">Skills</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact">Get in touch</a>
               </li>
             </ul>
 

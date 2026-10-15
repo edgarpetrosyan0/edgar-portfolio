@@ -6,7 +6,7 @@ section {
 }
 
 h2 {
-  font-size: clamp(2rem, 4.6vw, 3.2rem);
+  font-size: 2.25rem;
   font-weight: 800;
   margin-bottom: 4rem;
 }
@@ -339,23 +339,11 @@ h2 {
 }
 
 .contact-card {
+  @include card;
+
   position: relative;
   overflow: hidden;
   padding: clamp(2rem, 5vw, 3.5rem);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  background:
-    radial-gradient(
-      circle at 90% 10%,
-      color-mix(in srgb, var(--crimson) 12%, transparent),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 10% 100%,
-      color-mix(in srgb, var(--wine) 10%, transparent),
-      transparent 32%
-    ),
-    var(--surface);
 }
 
 .contact-content {
@@ -472,7 +460,7 @@ h2 {
     border: 1px solid var(--card-border, var(--line));
 
     &__icon {
-      display: grid
+      display: grid;
     }
   }
 }

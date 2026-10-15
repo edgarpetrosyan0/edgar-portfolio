@@ -14,7 +14,7 @@ export default function Home() {
       <ProfileHeader />
       <section id="experience">
         <div className="wrapper">
-          <h2>Career Journey</h2>
+          <h2>Experience</h2>
           <div className="exp-list">
             {jobs.map((j, i) => (
               <ExperienceItem key={j.title}>
