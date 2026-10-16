@@ -8,6 +8,7 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Stats from "./Stats";
+import BackgroundCanvas from "./BackgroundCanvas";
 
 const WORDS = ["Edgar", "Petrosyan"] as const;
 const AVAILABILITY = ["On-site", "Remote", "Hybrid"] as const;
@@ -63,6 +64,7 @@ export default function ProfileHeader() {
 
   return (
     <div className="profile">
+
       <div className="wrapper profile-grid">
         <div>
           <h1 aria-label="Edgar Petrosyan, Senior Frontend Engineer">

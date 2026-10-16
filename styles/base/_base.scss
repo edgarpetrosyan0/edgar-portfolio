@@ -1,8 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// Default theme
-
+// Default theme (dark)
 :root {
   --bg: #{$dark-bg};
   --surface: #{$dark-surface};
@@ -19,6 +18,18 @@
   --glass: #{$dark-glass};
   --frame-border: #{$dark-frame-border};
   --grad: #{$grad};
+
+  --card-bg: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--surface) 95%, white),
+    color-mix(in srgb, var(--surface) 98.5%, white)
+  );
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 10px 30px -16px rgba(0, 0, 0, 0.6);
+
+  --glow-a: 14%;
+  --glow-b: 12%;
+  --glow-c: 14%;
 }
 
 [data-theme="dark"] {
@@ -37,14 +48,18 @@
   --glass: #{$dark-glass};
   --frame-border: #{$dark-frame-border};
   --grad: #{$grad};
- 
+
   --card-bg: linear-gradient(
     160deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.015)
+    color-mix(in srgb, var(--bg) 95%, white),
+    color-mix(in srgb, var(--bg) 98.5%, white)
   );
   --card-border: rgba(255, 255, 255, 0.08);
   --card-shadow: none;
+
+  --glow-a: 14%;
+  --glow-b: 12%;
+  --glow-c: 14%;
 }
 
 [data-theme="light"] {
@@ -63,9 +78,15 @@
   --glass: #{$light-glass};
   --frame-border: #{$light-frame-border};
   --grad: #{$grad};
-   --card-bg: linear-gradient(160deg, var(--surface), var(--surface2));
+
+  --card-bg: linear-gradient(160deg, var(--surface), var(--surface2));
   --card-border: var(--line);
-  --card-shadow: 0 1px 2px rgba(20, 10, 5, 0.05), 0 10px 28px -14px rgba(20, 10, 5, 0.18);
+  --card-shadow:
+    0 1px 2px rgba(20, 10, 5, 0.05), 0 10px 28px -14px rgba(20, 10, 5, 0.18);
+
+  --glow-a: 20%;
+  --glow-b: 14%;
+  --glow-c: 10%;
 }
 
 * {
@@ -93,9 +114,6 @@ body {
   position: relative;
   background: var(--bg);
   color: var(--ink);
-  transition:
-    background-color 0.35s ease,
-    color 0.35s ease;
   font-family: var(--font-body), system-ui, sans-serif;
   font-weight: 400;
   font-size: 1.0625rem;
@@ -104,21 +122,6 @@ body {
   transition:
     background-color 0.25s ease,
     color 0.25s ease;
-
-  &::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background-image: $waves;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    -webkit-mask-image: linear-gradient(#000 0%, #000 35%, transparent 80%);
-    mask-image: linear-gradient(#000 0%, #000 35%, transparent 80%);
-  }
 }
 
 a {
@@ -150,4 +153,24 @@ h3 {
   @include grad-text;
 }
 
+.main-wrapper {
+  position: relative;
+  isolation: isolate;
+  background: transparent;
 
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+
+      radial-gradient(
+        800px 600px at 100% 40%,
+        color-mix(in srgb, #ff5a1f var(--glow-b), transparent),
+        transparent 70%
+      ),
+   
+  }
+}
